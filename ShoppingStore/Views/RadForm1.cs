@@ -13,30 +13,38 @@ namespace ShoppingStore
 {
     public partial class MainFrm : Telerik.WinControls.UI.RadForm
     {
+        #region [- ctors -]
         public MainFrm()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region [- MainFrm_Load -]
         private void MainFrm_Load(object sender, EventArgs e)
         {
             HideProductControls();
         }
+        #endregion
 
+        #region [- RadtrvwMenu_NodeMouseClick -]
         private void RadtrvwMenu_NodeMouseClick(object sender, RadTreeViewEventArgs e)
         {
-            if(radtrvwMenu.SelectedNode.Text == "Submit Order")
+            if (radtrvwMenu.SelectedNode.Text == "Submit Order")
             {
                 Views.OrderDetailFrm Ref_OrderDetailFrm = new Views.OrderDetailFrm();
                 Ref_OrderDetailFrm.Show();
             }
 
-            if(radtrvwMenu.SelectedNode.Text == "Define Product(s)")
+            if (radtrvwMenu.SelectedNode.Text == "Define Product(s)")
             {
                 radlblMenu.Hide();
                 ShowProductControls();
             }
         }
+        #endregion
+
+        #region [- ShowProductControls() -]
         private void ShowProductControls()
         {
             radgrpbxProductInformation.Show();
@@ -46,7 +54,9 @@ namespace ShoppingStore
             radbtnProductRemove.Show();
             radbtnProductClose.Show();
         }
+        #endregion
 
+        #region [- HideProductControls() -]
         private void HideProductControls()
         {
             radgrpbxProductInformation.Hide();
@@ -56,11 +66,14 @@ namespace ShoppingStore
             radbtnProductRemove.Hide();
             radbtnProductClose.Hide();
         }
+        #endregion
 
+        #region [- RadbtnProductClose_Click -]
         private void RadbtnProductClose_Click(object sender, EventArgs e)
         {
             HideProductControls();
             radlblMenu.Show();
-        }
+        } 
+        #endregion
     }
 }
