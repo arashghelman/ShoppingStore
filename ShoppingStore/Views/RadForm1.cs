@@ -11,11 +11,20 @@ using Telerik.WinControls.UI;
 
 namespace ShoppingStore
 {
-    public partial class RadForm1 : Telerik.WinControls.UI.RadForm
+    public partial class MainFrm : Telerik.WinControls.UI.RadForm
     {
-        public RadForm1()
+        public MainFrm()
         {
             InitializeComponent();
+        }
+
+        private void RadtrvwMenu_NodeMouseClick(object sender, RadTreeViewEventArgs e)
+        {
+            if(radtrvwMenu.SelectedNode.Text == "Submit Order")
+            {
+                Views.OrderDetailFrm Ref_OrderDetailFrm = new Views.OrderDetailFrm();
+                Ref_OrderDetailFrm.Show();
+            }
         }
     }
 }
