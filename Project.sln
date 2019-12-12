@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{C525570D-8640-4F1B-AF5B-9F1A3CBB46C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{3351AC25-10BF-4EF9-BDB7-0543454213AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreateDatabase", "CreateDatabase", "{CE4D5658-F1DE-4960-921C-B7B0F626D950}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UDT", "UDT", "{C8D0EEE1-947E-4171-AAD3-6916011297C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "USP", "USP", "{E1D33FD5-D54A-40F9-A961-56F0AF9ACAB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingStore", "ShoppingStore\ShoppingStore.csproj", "{A889C596-7EB4-4F84-989C-36DC6FCF1FF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A889C596-7EB4-4F84-989C-36DC6FCF1FF5}.Debug|x86.ActiveCfg = Debug|x86
+		{A889C596-7EB4-4F84-989C-36DC6FCF1FF5}.Debug|x86.Build.0 = Debug|x86
+		{A889C596-7EB4-4F84-989C-36DC6FCF1FF5}.Release|x86.ActiveCfg = Release|x86
+		{A889C596-7EB4-4F84-989C-36DC6FCF1FF5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3351AC25-10BF-4EF9-BDB7-0543454213AB} = {C525570D-8640-4F1B-AF5B-9F1A3CBB46C3}
+		{CE4D5658-F1DE-4960-921C-B7B0F626D950} = {3351AC25-10BF-4EF9-BDB7-0543454213AB}
+		{C8D0EEE1-947E-4171-AAD3-6916011297C4} = {3351AC25-10BF-4EF9-BDB7-0543454213AB}
+		{E1D33FD5-D54A-40F9-A961-56F0AF9ACAB6} = {3351AC25-10BF-4EF9-BDB7-0543454213AB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0F49B64-D26D-4338-9B8A-C52AA2A21416}
+	EndGlobalSection
+EndGlobal
