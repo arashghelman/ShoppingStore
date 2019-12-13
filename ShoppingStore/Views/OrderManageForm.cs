@@ -15,5 +15,17 @@ namespace ShoppingStore.Views
         {
             InitializeComponent();
         }
+
+        private void RadbtnNew_Click(object sender, EventArgs e)
+        {
+            OrderDetailFrm Ref_OrderDetailFrm = new OrderDetailFrm();
+            Ref_OrderDetailFrm.Show();
+        }
+
+        private void RadbtnEdit_Click(object sender, EventArgs e)
+        {
+            OrderDetailFrm Ref_OrderDetailFrm = new OrderDetailFrm();
+            Ref_OrderDetailFrm.Show();
+        }
     }
 }
