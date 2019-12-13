@@ -31,6 +31,7 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderDetailFrm));
             this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
             this.radgrpbxSummary = new Telerik.WinControls.UI.RadGroupBox();
             this.radgrpbxPrice = new Telerik.WinControls.UI.RadGroupBox();
@@ -449,6 +450,7 @@
             this.ClientSize = new System.Drawing.Size(822, 613);
             this.Controls.Add(this.radgrpbxSummary);
             this.Controls.Add(this.radgrpbxDetail);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrderDetailFrm";
             // 
             // 

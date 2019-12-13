@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode7 = new Telerik.WinControls.UI.RadTreeNode();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode8 = new Telerik.WinControls.UI.RadTreeNode();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode9 = new Telerik.WinControls.UI.RadTreeNode();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode10 = new Telerik.WinControls.UI.RadTreeNode();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode11 = new Telerik.WinControls.UI.RadTreeNode();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode12 = new Telerik.WinControls.UI.RadTreeNode();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadTreeNode radTreeNode1 = new Telerik.WinControls.UI.RadTreeNode();
+            Telerik.WinControls.UI.RadTreeNode radTreeNode2 = new Telerik.WinControls.UI.RadTreeNode();
+            Telerik.WinControls.UI.RadTreeNode radTreeNode3 = new Telerik.WinControls.UI.RadTreeNode();
+            Telerik.WinControls.UI.RadTreeNode radTreeNode4 = new Telerik.WinControls.UI.RadTreeNode();
+            Telerik.WinControls.UI.RadTreeNode radTreeNode5 = new Telerik.WinControls.UI.RadTreeNode();
+            Telerik.WinControls.UI.RadTreeNode radTreeNode6 = new Telerik.WinControls.UI.RadTreeNode();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
             this.radgrpbxMenu = new Telerik.WinControls.UI.RadGroupBox();
             this.radbtnProductClose = new Telerik.WinControls.UI.RadButton();
@@ -46,6 +47,8 @@
             this.radbtnProductAdd = new Telerik.WinControls.UI.RadButton();
             this.radlblMenu = new Telerik.WinControls.UI.RadLabel();
             this.radgrpbxProductInformation = new Telerik.WinControls.UI.RadGroupBox();
+            this.radtxtbxProductDiscount = new Telerik.WinControls.UI.RadTextBox();
+            this.lblProductDiscount = new System.Windows.Forms.Label();
             this.radbtnProductImage = new Telerik.WinControls.UI.RadButton();
             this.lblProductImage = new System.Windows.Forms.Label();
             this.nmrcupdwnProductQuantity = new System.Windows.Forms.NumericUpDown();
@@ -84,8 +87,6 @@
             this.lblPersonLastName = new System.Windows.Forms.Label();
             this.radtxtbxPersonFirstName = new Telerik.WinControls.UI.RadTextBox();
             this.lblPersonFirstName = new System.Windows.Forms.Label();
-            this.radtxtbxProductDiscount = new Telerik.WinControls.UI.RadTextBox();
-            this.lblProductDiscount = new System.Windows.Forms.Label();
             this.lblProductFileName = new System.Windows.Forms.Label();
             this.uploadFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxMenu)).BeginInit();
@@ -101,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radlblMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxProductInformation)).BeginInit();
             this.radgrpbxProductInformation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnProductImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcupdwnProductQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).BeginInit();
@@ -126,7 +128,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCompany)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonLastName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonFirstName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,7 +181,7 @@
             // 
             // 
             // 
-            this.radgvProducts.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.radgvProducts.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radgvProducts.Name = "radgvProducts";
             this.radgvProducts.Size = new System.Drawing.Size(386, 175);
             this.radgvProducts.TabIndex = 0;
@@ -250,6 +251,25 @@
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radgrpbxProductInformation.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxProductInformation.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.Empty;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxProductInformation.GetChildAt(0).GetChildAt(1).GetChildAt(0))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
+            // 
+            // radtxtbxProductDiscount
+            // 
+            this.radtxtbxProductDiscount.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radtxtbxProductDiscount.Location = new System.Drawing.Point(84, 96);
+            this.radtxtbxProductDiscount.Name = "radtxtbxProductDiscount";
+            this.radtxtbxProductDiscount.Size = new System.Drawing.Size(89, 21);
+            this.radtxtbxProductDiscount.TabIndex = 13;
+            // 
+            // lblProductDiscount
+            // 
+            this.lblProductDiscount.AutoSize = true;
+            this.lblProductDiscount.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductDiscount.ForeColor = System.Drawing.Color.Black;
+            this.lblProductDiscount.Location = new System.Drawing.Point(13, 100);
+            this.lblProductDiscount.Name = "lblProductDiscount";
+            this.lblProductDiscount.Size = new System.Drawing.Size(65, 15);
+            this.lblProductDiscount.TabIndex = 12;
+            this.lblProductDiscount.Text = "Discount : ";
             // 
             // radbtnProductImage
             // 
@@ -360,47 +380,47 @@
             this.radtrvwMenu.LineStyle = Telerik.WinControls.UI.TreeLineStyle.DashDotDot;
             this.radtrvwMenu.Location = new System.Drawing.Point(12, 12);
             this.radtrvwMenu.Name = "radtrvwMenu";
-            radTreeNode7.BackColor = System.Drawing.Color.LightSkyBlue;
-            radTreeNode7.BackColor2 = System.Drawing.Color.White;
-            radTreeNode7.Expanded = true;
-            radTreeNode7.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radTreeNode7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            radTreeNode7.Name = "Node1";
-            radTreeNode8.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radTreeNode8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            radTreeNode8.Name = "Node2";
-            radTreeNode8.Text = "Define Product(s)";
-            radTreeNode9.Expanded = true;
-            radTreeNode9.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radTreeNode9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            radTreeNode9.Name = "Node3";
-            radTreeNode9.Text = "Define People";
-            radTreeNode7.Nodes.AddRange(new Telerik.WinControls.UI.RadTreeNode[] {
-            radTreeNode8,
-            radTreeNode9});
-            radTreeNode7.Text = "Basic Definitions";
-            radTreeNode10.BackColor = System.Drawing.Color.LightSkyBlue;
-            radTreeNode10.BackColor2 = System.Drawing.Color.White;
-            radTreeNode10.Expanded = true;
-            radTreeNode10.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radTreeNode10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            radTreeNode10.Name = "Node4";
-            radTreeNode11.Expanded = true;
-            radTreeNode11.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radTreeNode11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            radTreeNode11.Name = "Node5";
-            radTreeNode11.Text = "Submit Order";
-            radTreeNode12.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radTreeNode12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            radTreeNode12.Name = "Node6";
-            radTreeNode12.Text = "Manage Orders";
-            radTreeNode10.Nodes.AddRange(new Telerik.WinControls.UI.RadTreeNode[] {
-            radTreeNode11,
-            radTreeNode12});
-            radTreeNode10.Text = "Transactions";
+            radTreeNode1.BackColor = System.Drawing.Color.LightSkyBlue;
+            radTreeNode1.BackColor2 = System.Drawing.Color.White;
+            radTreeNode1.Expanded = true;
+            radTreeNode1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radTreeNode1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            radTreeNode1.Name = "Node1";
+            radTreeNode2.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radTreeNode2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            radTreeNode2.Name = "Node2";
+            radTreeNode2.Text = "Define Product(s)";
+            radTreeNode3.Expanded = true;
+            radTreeNode3.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radTreeNode3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            radTreeNode3.Name = "Node3";
+            radTreeNode3.Text = "Define People";
+            radTreeNode1.Nodes.AddRange(new Telerik.WinControls.UI.RadTreeNode[] {
+            radTreeNode2,
+            radTreeNode3});
+            radTreeNode1.Text = "Basic Definitions";
+            radTreeNode4.BackColor = System.Drawing.Color.LightSkyBlue;
+            radTreeNode4.BackColor2 = System.Drawing.Color.White;
+            radTreeNode4.Expanded = true;
+            radTreeNode4.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radTreeNode4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            radTreeNode4.Name = "Node4";
+            radTreeNode5.Expanded = true;
+            radTreeNode5.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radTreeNode5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            radTreeNode5.Name = "Node5";
+            radTreeNode5.Text = "Submit Order";
+            radTreeNode6.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radTreeNode6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            radTreeNode6.Name = "Node6";
+            radTreeNode6.Text = "Manage Orders";
+            radTreeNode4.Nodes.AddRange(new Telerik.WinControls.UI.RadTreeNode[] {
+            radTreeNode5,
+            radTreeNode6});
+            radTreeNode4.Text = "Transactions";
             this.radtrvwMenu.Nodes.AddRange(new Telerik.WinControls.UI.RadTreeNode[] {
-            radTreeNode7,
-            radTreeNode10});
+            radTreeNode1,
+            radTreeNode4});
             this.radtrvwMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radtrvwMenu.Size = new System.Drawing.Size(184, 453);
             this.radtrvwMenu.SpacingBetweenNodes = -1;
@@ -443,7 +463,7 @@
             // 
             // 
             // 
-            this.radgvPeople.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.radgvPeople.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radgvPeople.Name = "radgvPeople";
             this.radgvPeople.Size = new System.Drawing.Size(385, 94);
             this.radgvPeople.TabIndex = 0;
@@ -698,25 +718,6 @@
             this.lblPersonFirstName.TabIndex = 0;
             this.lblPersonFirstName.Text = "First Name : ";
             // 
-            // radtxtbxProductDiscount
-            // 
-            this.radtxtbxProductDiscount.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radtxtbxProductDiscount.Location = new System.Drawing.Point(84, 96);
-            this.radtxtbxProductDiscount.Name = "radtxtbxProductDiscount";
-            this.radtxtbxProductDiscount.Size = new System.Drawing.Size(89, 21);
-            this.radtxtbxProductDiscount.TabIndex = 13;
-            // 
-            // lblProductDiscount
-            // 
-            this.lblProductDiscount.AutoSize = true;
-            this.lblProductDiscount.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductDiscount.ForeColor = System.Drawing.Color.Black;
-            this.lblProductDiscount.Location = new System.Drawing.Point(13, 100);
-            this.lblProductDiscount.Name = "lblProductDiscount";
-            this.lblProductDiscount.Size = new System.Drawing.Size(65, 15);
-            this.lblProductDiscount.TabIndex = 12;
-            this.lblProductDiscount.Text = "Discount : ";
-            // 
             // lblProductFileName
             // 
             this.lblProductFileName.AutoSize = true;
@@ -742,6 +743,7 @@
             this.Controls.Add(this.radgrpbxMenu);
             this.Controls.Add(this.radgrpbxPerson);
             this.Controls.Add(this.radtrvwMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainFrm";
             // 
             // 
@@ -765,6 +767,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxProductInformation)).EndInit();
             this.radgrpbxProductInformation.ResumeLayout(false);
             this.radgrpbxProductInformation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnProductImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcupdwnProductQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).EndInit();
@@ -791,7 +794,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCompany)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonLastName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonFirstName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

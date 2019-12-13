@@ -118,6 +118,10 @@
   </ItemGroup>
   <ItemGroup>
     <!--sirinie -->
+    <Folder Include="Models\DomainModels\DTO\EF\" />
+    <Folder Include="Models\DomainModels\DTO\MetaData\" />
+    <Folder Include="Models\DomainModels\POCO\" />
+    <Folder Include="Models\ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
