@@ -59,7 +59,23 @@
             this.radtrvwMenu = new Telerik.WinControls.UI.RadTreeView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.radgrpbxPerson = new Telerik.WinControls.UI.RadGroupBox();
+            this.radgrpbxPeople = new Telerik.WinControls.UI.RadGroupBox();
+            this.radgvPeople = new Telerik.WinControls.UI.RadGridView();
+            this.radbtnPersonClose = new Telerik.WinControls.UI.RadButton();
             this.radgrpbxPersonInfromation = new Telerik.WinControls.UI.RadGroupBox();
+            this.radtxtbxPersonAddress = new Telerik.WinControls.UI.RadTextBox();
+            this.lblPersonAddress = new System.Windows.Forms.Label();
+            this.radbtnPersonRemove = new Telerik.WinControls.UI.RadButton();
+            this.radbtnPersonEdit = new Telerik.WinControls.UI.RadButton();
+            this.radbtnPersonAdd = new Telerik.WinControls.UI.RadButton();
+            this.radtxtbxPersonEmail = new Telerik.WinControls.UI.RadTextBox();
+            this.lblPersonEmailAddress = new System.Windows.Forms.Label();
+            this.radtxtbxPersonCity = new Telerik.WinControls.UI.RadTextBox();
+            this.lblPersonCity = new System.Windows.Forms.Label();
+            this.radtxtbxPersonCountry = new Telerik.WinControls.UI.RadTextBox();
+            this.lblPersonCountry = new System.Windows.Forms.Label();
+            this.radtxtbxPersonPhone = new Telerik.WinControls.UI.RadTextBox();
+            this.lblPersonPhone = new System.Windows.Forms.Label();
             this.cmbbxPersonRole = new System.Windows.Forms.ComboBox();
             this.radtxtbxPersonCompany = new Telerik.WinControls.UI.RadTextBox();
             this.lblPersonRole = new System.Windows.Forms.Label();
@@ -68,23 +84,10 @@
             this.lblPersonLastName = new System.Windows.Forms.Label();
             this.radtxtbxPersonFirstName = new Telerik.WinControls.UI.RadTextBox();
             this.lblPersonFirstName = new System.Windows.Forms.Label();
-            this.radOpenFileDialog1 = new Telerik.WinControls.UI.RadOpenFileDialog();
-            this.radtxtbxPersonPhone = new Telerik.WinControls.UI.RadTextBox();
-            this.lblPersonPhone = new System.Windows.Forms.Label();
-            this.lblPersonCountry = new System.Windows.Forms.Label();
-            this.radtxtbxPersonCountry = new Telerik.WinControls.UI.RadTextBox();
-            this.radtxtbxPersonCity = new Telerik.WinControls.UI.RadTextBox();
-            this.lblPersonCity = new System.Windows.Forms.Label();
-            this.radtxtbxPersonEmail = new Telerik.WinControls.UI.RadTextBox();
-            this.lblPersonEmailAddress = new System.Windows.Forms.Label();
-            this.radbtnPersonAdd = new Telerik.WinControls.UI.RadButton();
-            this.radbtnPersonEdit = new Telerik.WinControls.UI.RadButton();
-            this.radbtnPersonRemove = new Telerik.WinControls.UI.RadButton();
-            this.radtxtbxPersonAddress = new Telerik.WinControls.UI.RadTextBox();
-            this.lblPersonAddress = new System.Windows.Forms.Label();
-            this.radgrpbxPeople = new Telerik.WinControls.UI.RadGroupBox();
-            this.radgvPeople = new Telerik.WinControls.UI.RadGridView();
-            this.radbtnPersonClose = new Telerik.WinControls.UI.RadButton();
+            this.radtxtbxProductDiscount = new Telerik.WinControls.UI.RadTextBox();
+            this.lblProductDiscount = new System.Windows.Forms.Label();
+            this.lblProductFileName = new System.Windows.Forms.Label();
+            this.uploadFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxMenu)).BeginInit();
             this.radgrpbxMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnProductClose)).BeginInit();
@@ -105,24 +108,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.radtrvwMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPerson)).BeginInit();
             this.radgrpbxPerson.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPersonInfromation)).BeginInit();
-            this.radgrpbxPersonInfromation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCompany)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonLastName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonFirstName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonPhone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCountry)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonRemove)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPeople)).BeginInit();
             this.radgrpbxPeople.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radgvPeople)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgvPeople.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPersonInfromation)).BeginInit();
+            this.radgrpbxPersonInfromation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonRemove)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCountry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonPhone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCompany)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonLastName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonFirstName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,6 +226,8 @@
             // radgrpbxProductInformation
             // 
             this.radgrpbxProductInformation.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radgrpbxProductInformation.Controls.Add(this.radtxtbxProductDiscount);
+            this.radgrpbxProductInformation.Controls.Add(this.lblProductDiscount);
             this.radgrpbxProductInformation.Controls.Add(this.radbtnProductImage);
             this.radgrpbxProductInformation.Controls.Add(this.lblProductImage);
             this.radgrpbxProductInformation.Controls.Add(this.nmrcupdwnProductQuantity);
@@ -238,7 +244,7 @@
             this.radgrpbxProductInformation.HeaderText = "Information";
             this.radgrpbxProductInformation.Location = new System.Drawing.Point(14, 11);
             this.radgrpbxProductInformation.Name = "radgrpbxProductInformation";
-            this.radgrpbxProductInformation.Size = new System.Drawing.Size(396, 149);
+            this.radgrpbxProductInformation.Size = new System.Drawing.Size(396, 140);
             this.radgrpbxProductInformation.TabIndex = 4;
             this.radgrpbxProductInformation.Text = "Information";
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radgrpbxProductInformation.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
@@ -247,19 +253,20 @@
             // 
             // radbtnProductImage
             // 
-            this.radbtnProductImage.Location = new System.Drawing.Point(160, 117);
+            this.radbtnProductImage.Location = new System.Drawing.Point(291, 106);
             this.radbtnProductImage.Name = "radbtnProductImage";
-            this.radbtnProductImage.Size = new System.Drawing.Size(85, 20);
+            this.radbtnProductImage.Size = new System.Drawing.Size(91, 20);
             this.radbtnProductImage.TabIndex = 11;
-            this.radbtnProductImage.Text = "radButton1";
+            this.radbtnProductImage.Text = "Browse";
             this.radbtnProductImage.ThemeName = "Office2013Light";
+            this.radbtnProductImage.Click += new System.EventHandler(this.RadbtnProductImage_Click);
             // 
             // lblProductImage
             // 
             this.lblProductImage.AutoSize = true;
             this.lblProductImage.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductImage.ForeColor = System.Drawing.Color.Black;
-            this.lblProductImage.Location = new System.Drawing.Point(105, 118);
+            this.lblProductImage.Location = new System.Drawing.Point(236, 107);
             this.lblProductImage.Name = "lblProductImage";
             this.lblProductImage.Size = new System.Drawing.Size(49, 15);
             this.lblProductImage.TabIndex = 10;
@@ -268,7 +275,7 @@
             // nmrcupdwnProductQuantity
             // 
             this.nmrcupdwnProductQuantity.Font = new System.Drawing.Font("Microsoft MHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmrcupdwnProductQuantity.Location = new System.Drawing.Point(314, 78);
+            this.nmrcupdwnProductQuantity.Location = new System.Drawing.Point(316, 73);
             this.nmrcupdwnProductQuantity.Name = "nmrcupdwnProductQuantity";
             this.nmrcupdwnProductQuantity.Size = new System.Drawing.Size(48, 25);
             this.nmrcupdwnProductQuantity.TabIndex = 9;
@@ -278,7 +285,7 @@
             this.lblProductQuantity.AutoSize = true;
             this.lblProductQuantity.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductQuantity.ForeColor = System.Drawing.Color.Black;
-            this.lblProductQuantity.Location = new System.Drawing.Point(220, 82);
+            this.lblProductQuantity.Location = new System.Drawing.Point(220, 77);
             this.lblProductQuantity.Name = "lblProductQuantity";
             this.lblProductQuantity.Size = new System.Drawing.Size(65, 15);
             this.lblProductQuantity.TabIndex = 8;
@@ -287,7 +294,7 @@
             // radTextBox1
             // 
             this.radTextBox1.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radTextBox1.Location = new System.Drawing.Point(73, 80);
+            this.radTextBox1.Location = new System.Drawing.Point(73, 70);
             this.radTextBox1.Name = "radTextBox1";
             this.radTextBox1.Size = new System.Drawing.Size(100, 21);
             this.radTextBox1.TabIndex = 7;
@@ -297,7 +304,7 @@
             this.lblProductPrice.AutoSize = true;
             this.lblProductPrice.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblProductPrice.Location = new System.Drawing.Point(19, 82);
+            this.lblProductPrice.Location = new System.Drawing.Point(13, 73);
             this.lblProductPrice.Name = "lblProductPrice";
             this.lblProductPrice.Size = new System.Drawing.Size(42, 15);
             this.lblProductPrice.TabIndex = 6;
@@ -413,6 +420,45 @@
             this.radgrpbxPerson.Size = new System.Drawing.Size(426, 453);
             this.radgrpbxPerson.TabIndex = 4;
             // 
+            // radgrpbxPeople
+            // 
+            this.radgrpbxPeople.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radgrpbxPeople.Controls.Add(this.radgvPeople);
+            this.radgrpbxPeople.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radgrpbxPeople.ForeColor = System.Drawing.Color.DimGray;
+            this.radgrpbxPeople.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
+            this.radgrpbxPeople.HeaderText = "People";
+            this.radgrpbxPeople.Location = new System.Drawing.Point(14, 286);
+            this.radgrpbxPeople.Name = "radgrpbxPeople";
+            this.radgrpbxPeople.Size = new System.Drawing.Size(396, 129);
+            this.radgrpbxPeople.TabIndex = 5;
+            this.radgrpbxPeople.Text = "People";
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radgrpbxPeople.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxPeople.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.Empty;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxPeople.GetChildAt(0).GetChildAt(1).GetChildAt(0))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
+            // 
+            // radgvPeople
+            // 
+            this.radgvPeople.Location = new System.Drawing.Point(6, 30);
+            // 
+            // 
+            // 
+            this.radgvPeople.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.radgvPeople.Name = "radgvPeople";
+            this.radgvPeople.Size = new System.Drawing.Size(385, 94);
+            this.radgvPeople.TabIndex = 0;
+            this.radgvPeople.ThemeName = "Office2013Light";
+            // 
+            // radbtnPersonClose
+            // 
+            this.radbtnPersonClose.Location = new System.Drawing.Point(171, 421);
+            this.radbtnPersonClose.Name = "radbtnPersonClose";
+            this.radbtnPersonClose.Size = new System.Drawing.Size(85, 21);
+            this.radbtnPersonClose.TabIndex = 13;
+            this.radbtnPersonClose.Text = "X  Close";
+            this.radbtnPersonClose.ThemeName = "Office2013Light";
+            this.radbtnPersonClose.Click += new System.EventHandler(this.RadbtnPersonClose_Click);
+            // 
             // radgrpbxPersonInfromation
             // 
             this.radgrpbxPersonInfromation.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -449,6 +495,128 @@
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radgrpbxPersonInfromation.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxPersonInfromation.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.Empty;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxPersonInfromation.GetChildAt(0).GetChildAt(1).GetChildAt(0))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
+            // 
+            // radtxtbxPersonAddress
+            // 
+            this.radtxtbxPersonAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radtxtbxPersonAddress.Location = new System.Drawing.Point(99, 150);
+            this.radtxtbxPersonAddress.Name = "radtxtbxPersonAddress";
+            this.radtxtbxPersonAddress.Size = new System.Drawing.Size(119, 21);
+            this.radtxtbxPersonAddress.TabIndex = 21;
+            // 
+            // lblPersonAddress
+            // 
+            this.lblPersonAddress.AutoSize = true;
+            this.lblPersonAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonAddress.ForeColor = System.Drawing.Color.Black;
+            this.lblPersonAddress.Location = new System.Drawing.Point(18, 152);
+            this.lblPersonAddress.Name = "lblPersonAddress";
+            this.lblPersonAddress.Size = new System.Drawing.Size(58, 15);
+            this.lblPersonAddress.TabIndex = 20;
+            this.lblPersonAddress.Text = "Address : ";
+            // 
+            // radbtnPersonRemove
+            // 
+            this.radbtnPersonRemove.Location = new System.Drawing.Point(270, 195);
+            this.radbtnPersonRemove.Name = "radbtnPersonRemove";
+            this.radbtnPersonRemove.Size = new System.Drawing.Size(85, 21);
+            this.radbtnPersonRemove.TabIndex = 19;
+            this.radbtnPersonRemove.Text = "Remove";
+            this.radbtnPersonRemove.ThemeName = "Office2013Light";
+            // 
+            // radbtnPersonEdit
+            // 
+            this.radbtnPersonEdit.Location = new System.Drawing.Point(270, 148);
+            this.radbtnPersonEdit.Name = "radbtnPersonEdit";
+            this.radbtnPersonEdit.Size = new System.Drawing.Size(85, 21);
+            this.radbtnPersonEdit.TabIndex = 18;
+            this.radbtnPersonEdit.Text = "Edit";
+            this.radbtnPersonEdit.ThemeName = "Office2013Light";
+            // 
+            // radbtnPersonAdd
+            // 
+            this.radbtnPersonAdd.Location = new System.Drawing.Point(270, 98);
+            this.radbtnPersonAdd.Name = "radbtnPersonAdd";
+            this.radbtnPersonAdd.Size = new System.Drawing.Size(85, 21);
+            this.radbtnPersonAdd.TabIndex = 17;
+            this.radbtnPersonAdd.Text = "Add";
+            this.radbtnPersonAdd.ThemeName = "Office2013Light";
+            // 
+            // radtxtbxPersonEmail
+            // 
+            this.radtxtbxPersonEmail.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radtxtbxPersonEmail.Location = new System.Drawing.Point(99, 123);
+            this.radtxtbxPersonEmail.Name = "radtxtbxPersonEmail";
+            this.radtxtbxPersonEmail.Size = new System.Drawing.Size(119, 21);
+            this.radtxtbxPersonEmail.TabIndex = 16;
+            // 
+            // lblPersonEmailAddress
+            // 
+            this.lblPersonEmailAddress.AutoSize = true;
+            this.lblPersonEmailAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonEmailAddress.ForeColor = System.Drawing.Color.Black;
+            this.lblPersonEmailAddress.Location = new System.Drawing.Point(18, 125);
+            this.lblPersonEmailAddress.Name = "lblPersonEmailAddress";
+            this.lblPersonEmailAddress.Size = new System.Drawing.Size(50, 15);
+            this.lblPersonEmailAddress.TabIndex = 15;
+            this.lblPersonEmailAddress.Text = "E-Mail : ";
+            // 
+            // radtxtbxPersonCity
+            // 
+            this.radtxtbxPersonCity.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radtxtbxPersonCity.Location = new System.Drawing.Point(99, 177);
+            this.radtxtbxPersonCity.Name = "radtxtbxPersonCity";
+            this.radtxtbxPersonCity.Size = new System.Drawing.Size(119, 21);
+            this.radtxtbxPersonCity.TabIndex = 14;
+            // 
+            // lblPersonCity
+            // 
+            this.lblPersonCity.AutoSize = true;
+            this.lblPersonCity.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonCity.ForeColor = System.Drawing.Color.Black;
+            this.lblPersonCity.Location = new System.Drawing.Point(18, 179);
+            this.lblPersonCity.Name = "lblPersonCity";
+            this.lblPersonCity.Size = new System.Drawing.Size(38, 15);
+            this.lblPersonCity.TabIndex = 13;
+            this.lblPersonCity.Text = "City : ";
+            // 
+            // radtxtbxPersonCountry
+            // 
+            this.radtxtbxPersonCountry.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radtxtbxPersonCountry.Location = new System.Drawing.Point(99, 204);
+            this.radtxtbxPersonCountry.Name = "radtxtbxPersonCountry";
+            this.radtxtbxPersonCountry.Size = new System.Drawing.Size(119, 21);
+            this.radtxtbxPersonCountry.TabIndex = 12;
+            // 
+            // lblPersonCountry
+            // 
+            this.lblPersonCountry.AutoSize = true;
+            this.lblPersonCountry.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonCountry.ForeColor = System.Drawing.Color.Black;
+            this.lblPersonCountry.Location = new System.Drawing.Point(18, 206);
+            this.lblPersonCountry.Name = "lblPersonCountry";
+            this.lblPersonCountry.Size = new System.Drawing.Size(60, 15);
+            this.lblPersonCountry.TabIndex = 11;
+            this.lblPersonCountry.Text = "Country : ";
+            // 
+            // radtxtbxPersonPhone
+            // 
+            this.radtxtbxPersonPhone.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radtxtbxPersonPhone.Location = new System.Drawing.Point(99, 96);
+            this.radtxtbxPersonPhone.Name = "radtxtbxPersonPhone";
+            this.radtxtbxPersonPhone.Size = new System.Drawing.Size(119, 21);
+            this.radtxtbxPersonPhone.TabIndex = 10;
+            // 
+            // lblPersonPhone
+            // 
+            this.lblPersonPhone.AutoSize = true;
+            this.lblPersonPhone.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonPhone.ForeColor = System.Drawing.Color.Black;
+            this.lblPersonPhone.Location = new System.Drawing.Point(18, 98);
+            this.lblPersonPhone.Name = "lblPersonPhone";
+            this.lblPersonPhone.Size = new System.Drawing.Size(50, 15);
+            this.lblPersonPhone.TabIndex = 9;
+            this.lblPersonPhone.Text = "Phone : ";
             // 
             // cmbbxPersonRole
             // 
@@ -530,171 +698,47 @@
             this.lblPersonFirstName.TabIndex = 0;
             this.lblPersonFirstName.Text = "First Name : ";
             // 
-            // radtxtbxPersonPhone
+            // radtxtbxProductDiscount
             // 
-            this.radtxtbxPersonPhone.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radtxtbxPersonPhone.Location = new System.Drawing.Point(99, 96);
-            this.radtxtbxPersonPhone.Name = "radtxtbxPersonPhone";
-            this.radtxtbxPersonPhone.Size = new System.Drawing.Size(119, 21);
-            this.radtxtbxPersonPhone.TabIndex = 10;
+            this.radtxtbxProductDiscount.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radtxtbxProductDiscount.Location = new System.Drawing.Point(84, 96);
+            this.radtxtbxProductDiscount.Name = "radtxtbxProductDiscount";
+            this.radtxtbxProductDiscount.Size = new System.Drawing.Size(89, 21);
+            this.radtxtbxProductDiscount.TabIndex = 13;
             // 
-            // lblPersonPhone
+            // lblProductDiscount
             // 
-            this.lblPersonPhone.AutoSize = true;
-            this.lblPersonPhone.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonPhone.ForeColor = System.Drawing.Color.Black;
-            this.lblPersonPhone.Location = new System.Drawing.Point(18, 98);
-            this.lblPersonPhone.Name = "lblPersonPhone";
-            this.lblPersonPhone.Size = new System.Drawing.Size(50, 15);
-            this.lblPersonPhone.TabIndex = 9;
-            this.lblPersonPhone.Text = "Phone : ";
+            this.lblProductDiscount.AutoSize = true;
+            this.lblProductDiscount.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductDiscount.ForeColor = System.Drawing.Color.Black;
+            this.lblProductDiscount.Location = new System.Drawing.Point(13, 100);
+            this.lblProductDiscount.Name = "lblProductDiscount";
+            this.lblProductDiscount.Size = new System.Drawing.Size(65, 15);
+            this.lblProductDiscount.TabIndex = 12;
+            this.lblProductDiscount.Text = "Discount : ";
             // 
-            // lblPersonCountry
+            // lblProductFileName
             // 
-            this.lblPersonCountry.AutoSize = true;
-            this.lblPersonCountry.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonCountry.ForeColor = System.Drawing.Color.Black;
-            this.lblPersonCountry.Location = new System.Drawing.Point(18, 206);
-            this.lblPersonCountry.Name = "lblPersonCountry";
-            this.lblPersonCountry.Size = new System.Drawing.Size(60, 15);
-            this.lblPersonCountry.TabIndex = 11;
-            this.lblPersonCountry.Text = "Country : ";
+            this.lblProductFileName.AutoSize = true;
+            this.lblProductFileName.Location = new System.Drawing.Point(694, 9);
+            this.lblProductFileName.Name = "lblProductFileName";
+            this.lblProductFileName.Size = new System.Drawing.Size(66, 17);
+            this.lblProductFileName.TabIndex = 14;
+            this.lblProductFileName.Text = "FileName";
             // 
-            // radtxtbxPersonCountry
+            // uploadFileDialog
             // 
-            this.radtxtbxPersonCountry.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radtxtbxPersonCountry.Location = new System.Drawing.Point(99, 204);
-            this.radtxtbxPersonCountry.Name = "radtxtbxPersonCountry";
-            this.radtxtbxPersonCountry.Size = new System.Drawing.Size(119, 21);
-            this.radtxtbxPersonCountry.TabIndex = 12;
-            // 
-            // radtxtbxPersonCity
-            // 
-            this.radtxtbxPersonCity.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radtxtbxPersonCity.Location = new System.Drawing.Point(99, 177);
-            this.radtxtbxPersonCity.Name = "radtxtbxPersonCity";
-            this.radtxtbxPersonCity.Size = new System.Drawing.Size(119, 21);
-            this.radtxtbxPersonCity.TabIndex = 14;
-            // 
-            // lblPersonCity
-            // 
-            this.lblPersonCity.AutoSize = true;
-            this.lblPersonCity.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonCity.ForeColor = System.Drawing.Color.Black;
-            this.lblPersonCity.Location = new System.Drawing.Point(18, 179);
-            this.lblPersonCity.Name = "lblPersonCity";
-            this.lblPersonCity.Size = new System.Drawing.Size(38, 15);
-            this.lblPersonCity.TabIndex = 13;
-            this.lblPersonCity.Text = "City : ";
-            // 
-            // radtxtbxPersonEmail
-            // 
-            this.radtxtbxPersonEmail.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radtxtbxPersonEmail.Location = new System.Drawing.Point(99, 123);
-            this.radtxtbxPersonEmail.Name = "radtxtbxPersonEmail";
-            this.radtxtbxPersonEmail.Size = new System.Drawing.Size(119, 21);
-            this.radtxtbxPersonEmail.TabIndex = 16;
-            // 
-            // lblPersonEmailAddress
-            // 
-            this.lblPersonEmailAddress.AutoSize = true;
-            this.lblPersonEmailAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonEmailAddress.ForeColor = System.Drawing.Color.Black;
-            this.lblPersonEmailAddress.Location = new System.Drawing.Point(18, 125);
-            this.lblPersonEmailAddress.Name = "lblPersonEmailAddress";
-            this.lblPersonEmailAddress.Size = new System.Drawing.Size(50, 15);
-            this.lblPersonEmailAddress.TabIndex = 15;
-            this.lblPersonEmailAddress.Text = "E-Mail : ";
-            // 
-            // radbtnPersonAdd
-            // 
-            this.radbtnPersonAdd.Location = new System.Drawing.Point(270, 98);
-            this.radbtnPersonAdd.Name = "radbtnPersonAdd";
-            this.radbtnPersonAdd.Size = new System.Drawing.Size(85, 21);
-            this.radbtnPersonAdd.TabIndex = 17;
-            this.radbtnPersonAdd.Text = "Add";
-            this.radbtnPersonAdd.ThemeName = "Office2013Light";
-            // 
-            // radbtnPersonEdit
-            // 
-            this.radbtnPersonEdit.Location = new System.Drawing.Point(270, 148);
-            this.radbtnPersonEdit.Name = "radbtnPersonEdit";
-            this.radbtnPersonEdit.Size = new System.Drawing.Size(85, 21);
-            this.radbtnPersonEdit.TabIndex = 18;
-            this.radbtnPersonEdit.Text = "Edit";
-            this.radbtnPersonEdit.ThemeName = "Office2013Light";
-            // 
-            // radbtnPersonRemove
-            // 
-            this.radbtnPersonRemove.Location = new System.Drawing.Point(270, 195);
-            this.radbtnPersonRemove.Name = "radbtnPersonRemove";
-            this.radbtnPersonRemove.Size = new System.Drawing.Size(85, 21);
-            this.radbtnPersonRemove.TabIndex = 19;
-            this.radbtnPersonRemove.Text = "Remove";
-            this.radbtnPersonRemove.ThemeName = "Office2013Light";
-            // 
-            // radtxtbxPersonAddress
-            // 
-            this.radtxtbxPersonAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radtxtbxPersonAddress.Location = new System.Drawing.Point(99, 150);
-            this.radtxtbxPersonAddress.Name = "radtxtbxPersonAddress";
-            this.radtxtbxPersonAddress.Size = new System.Drawing.Size(119, 21);
-            this.radtxtbxPersonAddress.TabIndex = 21;
-            // 
-            // lblPersonAddress
-            // 
-            this.lblPersonAddress.AutoSize = true;
-            this.lblPersonAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonAddress.ForeColor = System.Drawing.Color.Black;
-            this.lblPersonAddress.Location = new System.Drawing.Point(18, 152);
-            this.lblPersonAddress.Name = "lblPersonAddress";
-            this.lblPersonAddress.Size = new System.Drawing.Size(58, 15);
-            this.lblPersonAddress.TabIndex = 20;
-            this.lblPersonAddress.Text = "Address : ";
-            // 
-            // radgrpbxPeople
-            // 
-            this.radgrpbxPeople.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radgrpbxPeople.Controls.Add(this.radgvPeople);
-            this.radgrpbxPeople.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radgrpbxPeople.ForeColor = System.Drawing.Color.DimGray;
-            this.radgrpbxPeople.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radgrpbxPeople.HeaderText = "People";
-            this.radgrpbxPeople.Location = new System.Drawing.Point(14, 286);
-            this.radgrpbxPeople.Name = "radgrpbxPeople";
-            this.radgrpbxPeople.Size = new System.Drawing.Size(396, 129);
-            this.radgrpbxPeople.TabIndex = 5;
-            this.radgrpbxPeople.Text = "People";
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxPeople.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.Empty;
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxPeople.GetChildAt(0).GetChildAt(1).GetChildAt(0))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
-            // 
-            // radgvPeople
-            // 
-            this.radgvPeople.Location = new System.Drawing.Point(6, 30);
-            // 
-            // 
-            // 
-            this.radgvPeople.MasterTemplate.ViewDefinition = tableViewDefinition4;
-            this.radgvPeople.Name = "radgvPeople";
-            this.radgvPeople.Size = new System.Drawing.Size(385, 94);
-            this.radgvPeople.TabIndex = 0;
-            this.radgvPeople.ThemeName = "Office2013Light";
-            // 
-            // radbtnPersonClose
-            // 
-            this.radbtnPersonClose.Location = new System.Drawing.Point(171, 421);
-            this.radbtnPersonClose.Name = "radbtnPersonClose";
-            this.radbtnPersonClose.Size = new System.Drawing.Size(85, 21);
-            this.radbtnPersonClose.TabIndex = 13;
-            this.radbtnPersonClose.Text = "X  Close";
-            this.radbtnPersonClose.ThemeName = "Office2013Light";
-            this.radbtnPersonClose.Click += new System.EventHandler(this.RadbtnPersonClose_Click);
+            this.uploadFileDialog.Filter = "\"JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*\"";
+            this.uploadFileDialog.FilterIndex = 2;
+            this.uploadFileDialog.InitialDirectory = "@\"Desktop:\\\"";
+            this.uploadFileDialog.Title = "Open a picture";
             // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 476);
+            this.Controls.Add(this.lblProductFileName);
             this.Controls.Add(this.radgrpbxMenu);
             this.Controls.Add(this.radgrpbxPerson);
             this.Controls.Add(this.radtrvwMenu);
@@ -728,27 +772,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.radtrvwMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPerson)).EndInit();
             this.radgrpbxPerson.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPersonInfromation)).EndInit();
-            this.radgrpbxPersonInfromation.ResumeLayout(false);
-            this.radgrpbxPersonInfromation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCompany)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonLastName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonFirstName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonPhone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCountry)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonRemove)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPeople)).EndInit();
             this.radgrpbxPeople.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radgvPeople.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgvPeople)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPersonInfromation)).EndInit();
+            this.radgrpbxPersonInfromation.ResumeLayout(false);
+            this.radgrpbxPersonInfromation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonRemove)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radbtnPersonAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCountry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonPhone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonCompany)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonLastName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonFirstName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -786,7 +832,6 @@
         private System.Windows.Forms.Label lblPersonLastName;
         private Telerik.WinControls.UI.RadTextBox radtxtbxPersonFirstName;
         private System.Windows.Forms.Label lblPersonFirstName;
-        private Telerik.WinControls.UI.RadOpenFileDialog radOpenFileDialog1;
         private Telerik.WinControls.UI.RadTextBox radtxtbxPersonPhone;
         private System.Windows.Forms.Label lblPersonPhone;
         private Telerik.WinControls.UI.RadButton radbtnPersonClose;
@@ -803,5 +848,9 @@
         private System.Windows.Forms.Label lblPersonCountry;
         private Telerik.WinControls.UI.RadGroupBox radgrpbxPeople;
         private Telerik.WinControls.UI.RadGridView radgvPeople;
+        private Telerik.WinControls.UI.RadTextBox radtxtbxProductDiscount;
+        private System.Windows.Forms.Label lblProductDiscount;
+        private System.Windows.Forms.Label lblProductFileName;
+        private System.Windows.Forms.OpenFileDialog uploadFileDialog;
     }
 }

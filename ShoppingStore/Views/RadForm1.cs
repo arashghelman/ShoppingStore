@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -35,6 +36,10 @@ namespace ShoppingStore
             {
                 Views.OrderDetailFrm Ref_OrderDetailFrm = new Views.OrderDetailFrm();
                 Ref_OrderDetailFrm.Show();
+                radgrpbxMenu.Show();
+                radlblMenu.Show();
+                HidePersonControls();
+                HideProductControls();
             }
 
             if (radtrvwMenu.SelectedNode.Text == "Define Product(s)")
@@ -57,6 +62,10 @@ namespace ShoppingStore
             {
                 Views.OrderManageFrm Ref_OrderManageFrm = new Views.OrderManageFrm();
                 Ref_OrderManageFrm.Show();
+                radgrpbxMenu.Show();
+                radlblMenu.Show();
+                HidePersonControls();
+                HideProductControls();
             }
         }
         #endregion
@@ -93,6 +102,7 @@ namespace ShoppingStore
         }
         #endregion
 
+        #region [- ShowPersonControls() -]
         private void ShowPersonControls()
         {
             radgrpbxPerson.Show();
@@ -100,6 +110,9 @@ namespace ShoppingStore
             radgrpbxPeople.Show();
             radbtnPersonClose.Show();
         }
+        #endregion
+
+        #region [- HidePersonControls() -]
         private void HidePersonControls()
         {
             radgrpbxPerson.Hide();
@@ -107,12 +120,33 @@ namespace ShoppingStore
             radgrpbxPeople.Hide();
             radbtnPersonClose.Hide();
         }
+        #endregion
 
+        #region [- RadbtnPersonClose_Click -]
         private void RadbtnPersonClose_Click(object sender, EventArgs e)
         {
             radlblMenu.Show();
             HidePersonControls();
             radgrpbxMenu.Show();
+        } 
+        #endregion
+
+        #region [- AddImage() -]
+        private byte[] AddImage()
+        {
+            FileStream Ref_FileStream = new FileStream(lblProductFileName.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
+            byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
+            return imageByte;
         }
+        #endregion
+
+        #region [- RadbtnProductImage_Click -]
+        private void RadbtnProductImage_Click(object sender, EventArgs e)
+        {
+            uploadFileDialog.ShowDialog();
+            lblProductFileName.Text = uploadFileDialog.FileName;
+        } 
+        #endregion
     }
 }
