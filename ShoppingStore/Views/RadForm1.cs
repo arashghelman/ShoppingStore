@@ -24,6 +24,7 @@ namespace ShoppingStore
         private void MainFrm_Load(object sender, EventArgs e)
         {
             HideProductControls();
+            HidePersonControls();
         }
         #endregion
 
@@ -40,6 +41,22 @@ namespace ShoppingStore
             {
                 radlblMenu.Hide();
                 ShowProductControls();
+                HidePersonControls();
+                radgrpbxMenu.Show();
+            }
+
+            if(radtrvwMenu.SelectedNode.Text == "Define People")
+            {
+                radlblMenu.Hide();
+                ShowPersonControls();
+                HideProductControls();
+                radgrpbxMenu.Hide();
+            }
+
+            if(radtrvwMenu.SelectedNode.Text == "Manage Orders")
+            {
+                Views.OrderManageFrm Ref_OrderManageFrm = new Views.OrderManageFrm();
+                Ref_OrderManageFrm.Show();
             }
         }
         #endregion
@@ -73,7 +90,29 @@ namespace ShoppingStore
         {
             HideProductControls();
             radlblMenu.Show();
-        } 
+        }
         #endregion
+
+        private void ShowPersonControls()
+        {
+            radgrpbxPerson.Show();
+            radgrpbxPersonInfromation.Show();
+            radgrpbxPeople.Show();
+            radbtnPersonClose.Show();
+        }
+        private void HidePersonControls()
+        {
+            radgrpbxPerson.Hide();
+            radgrpbxPersonInfromation.Hide();
+            radgrpbxPeople.Hide();
+            radbtnPersonClose.Hide();
+        }
+
+        private void RadbtnPersonClose_Click(object sender, EventArgs e)
+        {
+            radlblMenu.Show();
+            HidePersonControls();
+            radgrpbxMenu.Show();
+        }
     }
 }

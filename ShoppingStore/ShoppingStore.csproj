@@ -69,6 +69,12 @@
     <Compile Include="Views\OrderDetailForm.Designer.cs">
       <DependentUpon>OrderDetailForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\OrderManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderManageForm.Designer.cs">
+      <DependentUpon>OrderManageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\RadForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Views\OrderDetailForm.resx">
       <DependentUpon>OrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderManageForm.resx">
+      <DependentUpon>OrderManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RadForm1.resx">
       <DependentUpon>RadForm1.cs</DependentUpon>
