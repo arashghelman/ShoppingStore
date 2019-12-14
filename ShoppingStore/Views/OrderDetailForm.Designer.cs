@@ -56,7 +56,7 @@
             this.lblQuantity = new System.Windows.Forms.Label();
             this.radbtnAdd = new Telerik.WinControls.UI.RadButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.radCheckedListBox1 = new Telerik.WinControls.UI.RadCheckedListBox();
+            this.radchckdlstbxProducts = new Telerik.WinControls.UI.RadCheckedListBox();
             this.lblCustomer = new System.Windows.Forms.Label();
             this.lblSalesperson = new System.Windows.Forms.Label();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
@@ -82,7 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radmlticlmncmbbxSalesperson.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radmlticlmncmbbxSalesperson.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckedListBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radchckdlstbxProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -291,7 +291,7 @@
             this.radgrpbxDetail.Controls.Add(this.lblQuantity);
             this.radgrpbxDetail.Controls.Add(this.radbtnAdd);
             this.radgrpbxDetail.Controls.Add(this.label1);
-            this.radgrpbxDetail.Controls.Add(this.radCheckedListBox1);
+            this.radgrpbxDetail.Controls.Add(this.radchckdlstbxProducts);
             this.radgrpbxDetail.Controls.Add(this.lblCustomer);
             this.radgrpbxDetail.Controls.Add(this.lblSalesperson);
             this.radgrpbxDetail.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -416,12 +416,12 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "What would you like to order?";
             // 
-            // radCheckedListBox1
+            // radchckdlstbxProducts
             // 
-            this.radCheckedListBox1.Location = new System.Drawing.Point(25, 261);
-            this.radCheckedListBox1.Name = "radCheckedListBox1";
-            this.radCheckedListBox1.Size = new System.Drawing.Size(282, 235);
-            this.radCheckedListBox1.TabIndex = 4;
+            this.radchckdlstbxProducts.Location = new System.Drawing.Point(25, 261);
+            this.radchckdlstbxProducts.Name = "radchckdlstbxProducts";
+            this.radchckdlstbxProducts.Size = new System.Drawing.Size(282, 235);
+            this.radchckdlstbxProducts.TabIndex = 4;
             // 
             // lblCustomer
             // 
@@ -483,7 +483,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radmlticlmncmbbxSalesperson.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radmlticlmncmbbxSalesperson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckedListBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radchckdlstbxProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -515,7 +515,7 @@
         private System.Windows.Forms.Label lblQuantity;
         private Telerik.WinControls.UI.RadButton radbtnAdd;
         private System.Windows.Forms.Label label1;
-        private Telerik.WinControls.UI.RadCheckedListBox radCheckedListBox1;
+        private Telerik.WinControls.UI.RadCheckedListBox radchckdlstbxProducts;
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.Label lblSalesperson;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
