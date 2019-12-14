@@ -2,5 +2,9 @@
 
 public class AppPath
 {
-	//Add EF with nuget packet manager to the project
+    #region [Step 1]
+    //Add EF with nuget packet manager to the project 
+    #endregion
+
+
 }
