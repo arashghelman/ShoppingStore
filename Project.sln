@@ -15,6 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "USP", "USP", "{E1D33FD5-D54
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingStore", "ShoppingStore\ShoppingStore.csproj", "{A889C596-7EB4-4F84-989C-36DC6FCF1FF5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Path", "Path", "{224AF326-8768-44B3-929A-36DBA1276A35}"
+	ProjectSection(SolutionItems) = preProject
+		AppPath.cs = AppPath.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -34,6 +39,7 @@ Global
 		{CE4D5658-F1DE-4960-921C-B7B0F626D950} = {3351AC25-10BF-4EF9-BDB7-0543454213AB}
 		{C8D0EEE1-947E-4171-AAD3-6916011297C4} = {3351AC25-10BF-4EF9-BDB7-0543454213AB}
 		{E1D33FD5-D54A-40F9-A961-56F0AF9ACAB6} = {3351AC25-10BF-4EF9-BDB7-0543454213AB}
+		{224AF326-8768-44B3-929A-36DBA1276A35} = {C525570D-8640-4F1B-AF5B-9F1A3CBB46C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F0F49B64-D26D-4338-9B8A-C52AA2A21416}
