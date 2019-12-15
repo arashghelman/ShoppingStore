@@ -79,9 +79,7 @@
             this.lblPersonCountry = new System.Windows.Forms.Label();
             this.radtxtbxPersonPhone = new Telerik.WinControls.UI.RadTextBox();
             this.lblPersonPhone = new System.Windows.Forms.Label();
-            this.cmbbxPersonRole = new System.Windows.Forms.ComboBox();
             this.radtxtbxPersonCompany = new Telerik.WinControls.UI.RadTextBox();
-            this.lblPersonRole = new System.Windows.Forms.Label();
             this.lblPersonCompany = new System.Windows.Forms.Label();
             this.radtxtbxPersonLastName = new Telerik.WinControls.UI.RadTextBox();
             this.lblPersonLastName = new System.Windows.Forms.Label();
@@ -142,7 +140,7 @@
             this.radgrpbxMenu.Controls.Add(this.radlblMenu);
             this.radgrpbxMenu.Controls.Add(this.radgrpbxProductInformation);
             this.radgrpbxMenu.HeaderText = "";
-            this.radgrpbxMenu.Location = new System.Drawing.Point(207, 12);
+            this.radgrpbxMenu.Location = new System.Drawing.Point(0, 0);
             this.radgrpbxMenu.Name = "radgrpbxMenu";
             this.radgrpbxMenu.Size = new System.Drawing.Size(426, 453);
             this.radgrpbxMenu.TabIndex = 3;
@@ -431,6 +429,7 @@
             // radgrpbxPerson
             // 
             this.radgrpbxPerson.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radgrpbxPerson.Controls.Add(this.radgrpbxMenu);
             this.radgrpbxPerson.Controls.Add(this.radgrpbxPeople);
             this.radgrpbxPerson.Controls.Add(this.radbtnPersonClose);
             this.radgrpbxPerson.Controls.Add(this.radgrpbxPersonInfromation);
@@ -495,9 +494,7 @@
             this.radgrpbxPersonInfromation.Controls.Add(this.lblPersonCountry);
             this.radgrpbxPersonInfromation.Controls.Add(this.radtxtbxPersonPhone);
             this.radgrpbxPersonInfromation.Controls.Add(this.lblPersonPhone);
-            this.radgrpbxPersonInfromation.Controls.Add(this.cmbbxPersonRole);
             this.radgrpbxPersonInfromation.Controls.Add(this.radtxtbxPersonCompany);
-            this.radgrpbxPersonInfromation.Controls.Add(this.lblPersonRole);
             this.radgrpbxPersonInfromation.Controls.Add(this.lblPersonCompany);
             this.radgrpbxPersonInfromation.Controls.Add(this.radtxtbxPersonLastName);
             this.radgrpbxPersonInfromation.Controls.Add(this.lblPersonLastName);
@@ -537,7 +534,7 @@
             // 
             // radbtnPersonRemove
             // 
-            this.radbtnPersonRemove.Location = new System.Drawing.Point(270, 195);
+            this.radbtnPersonRemove.Location = new System.Drawing.Point(268, 168);
             this.radbtnPersonRemove.Name = "radbtnPersonRemove";
             this.radbtnPersonRemove.Size = new System.Drawing.Size(85, 21);
             this.radbtnPersonRemove.TabIndex = 19;
@@ -546,7 +543,7 @@
             // 
             // radbtnPersonEdit
             // 
-            this.radbtnPersonEdit.Location = new System.Drawing.Point(270, 148);
+            this.radbtnPersonEdit.Location = new System.Drawing.Point(268, 121);
             this.radbtnPersonEdit.Name = "radbtnPersonEdit";
             this.radbtnPersonEdit.Size = new System.Drawing.Size(85, 21);
             this.radbtnPersonEdit.TabIndex = 18;
@@ -555,7 +552,7 @@
             // 
             // radbtnPersonAdd
             // 
-            this.radbtnPersonAdd.Location = new System.Drawing.Point(270, 98);
+            this.radbtnPersonAdd.Location = new System.Drawing.Point(268, 71);
             this.radbtnPersonAdd.Name = "radbtnPersonAdd";
             this.radbtnPersonAdd.Size = new System.Drawing.Size(85, 21);
             this.radbtnPersonAdd.TabIndex = 17;
@@ -638,18 +635,6 @@
             this.lblPersonPhone.TabIndex = 9;
             this.lblPersonPhone.Text = "Phone : ";
             // 
-            // cmbbxPersonRole
-            // 
-            this.cmbbxPersonRole.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbbxPersonRole.FormattingEnabled = true;
-            this.cmbbxPersonRole.Items.AddRange(new object[] {
-            "Salesperson",
-            "Customer"});
-            this.cmbbxPersonRole.Location = new System.Drawing.Point(292, 41);
-            this.cmbbxPersonRole.Name = "cmbbxPersonRole";
-            this.cmbbxPersonRole.Size = new System.Drawing.Size(85, 23);
-            this.cmbbxPersonRole.TabIndex = 8;
-            // 
             // radtxtbxPersonCompany
             // 
             this.radtxtbxPersonCompany.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -657,17 +642,6 @@
             this.radtxtbxPersonCompany.Name = "radtxtbxPersonCompany";
             this.radtxtbxPersonCompany.Size = new System.Drawing.Size(119, 21);
             this.radtxtbxPersonCompany.TabIndex = 7;
-            // 
-            // lblPersonRole
-            // 
-            this.lblPersonRole.AutoSize = true;
-            this.lblPersonRole.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonRole.ForeColor = System.Drawing.Color.Black;
-            this.lblPersonRole.Location = new System.Drawing.Point(246, 44);
-            this.lblPersonRole.Name = "lblPersonRole";
-            this.lblPersonRole.Size = new System.Drawing.Size(40, 15);
-            this.lblPersonRole.TabIndex = 6;
-            this.lblPersonRole.Text = "Role : ";
             // 
             // lblPersonCompany
             // 
@@ -740,7 +714,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 476);
             this.Controls.Add(this.lblProductFileName);
-            this.Controls.Add(this.radgrpbxMenu);
             this.Controls.Add(this.radgrpbxPerson);
             this.Controls.Add(this.radtrvwMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -826,9 +799,7 @@
         private System.Windows.Forms.Label lblProductImage;
         private Telerik.WinControls.UI.RadGroupBox radgrpbxPerson;
         private Telerik.WinControls.UI.RadGroupBox radgrpbxPersonInfromation;
-        private System.Windows.Forms.ComboBox cmbbxPersonRole;
         private Telerik.WinControls.UI.RadTextBox radtxtbxPersonCompany;
-        private System.Windows.Forms.Label lblPersonRole;
         private System.Windows.Forms.Label lblPersonCompany;
         private Telerik.WinControls.UI.RadTextBox radtxtbxPersonLastName;
         private System.Windows.Forms.Label lblPersonLastName;

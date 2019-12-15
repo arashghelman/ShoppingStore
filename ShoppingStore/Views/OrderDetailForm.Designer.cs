@@ -296,13 +296,13 @@
             this.radgrpbxDetail.Controls.Add(this.lblSalesperson);
             this.radgrpbxDetail.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radgrpbxDetail.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radgrpbxDetail.HeaderText = "Order Details";
+            this.radgrpbxDetail.HeaderText = "Options";
             this.radgrpbxDetail.HeaderTextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.radgrpbxDetail.Location = new System.Drawing.Point(12, 12);
             this.radgrpbxDetail.Name = "radgrpbxDetail";
             this.radgrpbxDetail.Size = new System.Drawing.Size(333, 589);
             this.radgrpbxDetail.TabIndex = 2;
-            this.radgrpbxDetail.Text = "Order Details";
+            this.radgrpbxDetail.Text = "Options";
             this.radgrpbxDetail.ThemeName = "ControlDefault";
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxDetail.GetChildAt(0).GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.White;
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radgrpbxDetail.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
