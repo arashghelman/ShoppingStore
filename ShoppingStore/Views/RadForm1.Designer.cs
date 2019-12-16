@@ -51,8 +51,6 @@
             this.lblProductDiscount = new System.Windows.Forms.Label();
             this.radbtnProductImage = new Telerik.WinControls.UI.RadButton();
             this.lblProductImage = new System.Windows.Forms.Label();
-            this.nmrcupdwnProductQuantity = new System.Windows.Forms.NumericUpDown();
-            this.lblProductQuantity = new System.Windows.Forms.Label();
             this.radTextBox1 = new Telerik.WinControls.UI.RadTextBox();
             this.lblProductPrice = new System.Windows.Forms.Label();
             this.cmbbxCategory = new System.Windows.Forms.ComboBox();
@@ -102,7 +100,6 @@
             this.radgrpbxProductInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnProductImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrcupdwnProductQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radtrvwMenu)).BeginInit();
@@ -225,12 +222,11 @@
             // radgrpbxProductInformation
             // 
             this.radgrpbxProductInformation.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radgrpbxProductInformation.Controls.Add(this.lblProductFileName);
             this.radgrpbxProductInformation.Controls.Add(this.radtxtbxProductDiscount);
             this.radgrpbxProductInformation.Controls.Add(this.lblProductDiscount);
             this.radgrpbxProductInformation.Controls.Add(this.radbtnProductImage);
             this.radgrpbxProductInformation.Controls.Add(this.lblProductImage);
-            this.radgrpbxProductInformation.Controls.Add(this.nmrcupdwnProductQuantity);
-            this.radgrpbxProductInformation.Controls.Add(this.lblProductQuantity);
             this.radgrpbxProductInformation.Controls.Add(this.radTextBox1);
             this.radgrpbxProductInformation.Controls.Add(this.lblProductPrice);
             this.radgrpbxProductInformation.Controls.Add(this.cmbbxCategory);
@@ -271,7 +267,7 @@
             // 
             // radbtnProductImage
             // 
-            this.radbtnProductImage.Location = new System.Drawing.Point(291, 106);
+            this.radbtnProductImage.Location = new System.Drawing.Point(291, 72);
             this.radbtnProductImage.Name = "radbtnProductImage";
             this.radbtnProductImage.Size = new System.Drawing.Size(91, 20);
             this.radbtnProductImage.TabIndex = 11;
@@ -284,30 +280,11 @@
             this.lblProductImage.AutoSize = true;
             this.lblProductImage.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductImage.ForeColor = System.Drawing.Color.Black;
-            this.lblProductImage.Location = new System.Drawing.Point(236, 107);
+            this.lblProductImage.Location = new System.Drawing.Point(236, 71);
             this.lblProductImage.Name = "lblProductImage";
             this.lblProductImage.Size = new System.Drawing.Size(49, 15);
             this.lblProductImage.TabIndex = 10;
             this.lblProductImage.Text = "Image : ";
-            // 
-            // nmrcupdwnProductQuantity
-            // 
-            this.nmrcupdwnProductQuantity.Font = new System.Drawing.Font("Microsoft MHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmrcupdwnProductQuantity.Location = new System.Drawing.Point(316, 73);
-            this.nmrcupdwnProductQuantity.Name = "nmrcupdwnProductQuantity";
-            this.nmrcupdwnProductQuantity.Size = new System.Drawing.Size(48, 25);
-            this.nmrcupdwnProductQuantity.TabIndex = 9;
-            // 
-            // lblProductQuantity
-            // 
-            this.lblProductQuantity.AutoSize = true;
-            this.lblProductQuantity.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductQuantity.ForeColor = System.Drawing.Color.Black;
-            this.lblProductQuantity.Location = new System.Drawing.Point(220, 77);
-            this.lblProductQuantity.Name = "lblProductQuantity";
-            this.lblProductQuantity.Size = new System.Drawing.Size(65, 15);
-            this.lblProductQuantity.TabIndex = 8;
-            this.lblProductQuantity.Text = "Quantity : ";
             // 
             // radTextBox1
             // 
@@ -695,9 +672,10 @@
             // lblProductFileName
             // 
             this.lblProductFileName.AutoSize = true;
-            this.lblProductFileName.Location = new System.Drawing.Point(694, 9);
+            this.lblProductFileName.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductFileName.Location = new System.Drawing.Point(236, 99);
             this.lblProductFileName.Name = "lblProductFileName";
-            this.lblProductFileName.Size = new System.Drawing.Size(66, 17);
+            this.lblProductFileName.Size = new System.Drawing.Size(55, 14);
             this.lblProductFileName.TabIndex = 14;
             this.lblProductFileName.Text = "FileName";
             // 
@@ -713,7 +691,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 476);
-            this.Controls.Add(this.lblProductFileName);
             this.Controls.Add(this.radgrpbxPerson);
             this.Controls.Add(this.radtrvwMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -742,7 +719,6 @@
             this.radgrpbxProductInformation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnProductImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrcupdwnProductQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxProductName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radtrvwMenu)).EndInit();
@@ -769,7 +745,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radtxtbxPersonFirstName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -783,8 +758,6 @@
         private Telerik.WinControls.UI.RadButton radbtnProductEdit;
         private Telerik.WinControls.UI.RadButton radbtnProductAdd;
         private Telerik.WinControls.UI.RadGroupBox radgrpbxProductInformation;
-        private System.Windows.Forms.NumericUpDown nmrcupdwnProductQuantity;
-        private System.Windows.Forms.Label lblProductQuantity;
         private Telerik.WinControls.UI.RadTextBox radTextBox1;
         private System.Windows.Forms.Label lblProductPrice;
         private System.Windows.Forms.ComboBox cmbbxCategory;
