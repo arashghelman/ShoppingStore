@@ -280,7 +280,7 @@
             this.lblProductImage.AutoSize = true;
             this.lblProductImage.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductImage.ForeColor = System.Drawing.Color.Black;
-            this.lblProductImage.Location = new System.Drawing.Point(236, 71);
+            this.lblProductImage.Location = new System.Drawing.Point(220, 72);
             this.lblProductImage.Name = "lblProductImage";
             this.lblProductImage.Size = new System.Drawing.Size(49, 15);
             this.lblProductImage.TabIndex = 10;
@@ -673,7 +673,7 @@
             // 
             this.lblProductFileName.AutoSize = true;
             this.lblProductFileName.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductFileName.Location = new System.Drawing.Point(236, 99);
+            this.lblProductFileName.Location = new System.Drawing.Point(220, 99);
             this.lblProductFileName.Name = "lblProductFileName";
             this.lblProductFileName.Size = new System.Drawing.Size(55, 14);
             this.lblProductFileName.TabIndex = 14;
