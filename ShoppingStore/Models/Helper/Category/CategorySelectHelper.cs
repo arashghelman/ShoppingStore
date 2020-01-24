@@ -10,5 +10,6 @@ namespace ShoppingStore.Models.Helper.Category
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
+        public int NumberOfProducts { get; set; }
     }
 }

@@ -64,6 +64,8 @@ namespace ShoppingStore
             FillProductsGrid();
             FillMultiColumnComboBoxCategory();
             HideColumns();
+            SetColumnSize();
+            lblProductId.Text = null;
         }
         #endregion
 
@@ -96,6 +98,13 @@ namespace ShoppingStore
                 Ref_OrderManageFrm.Show();
                 radgrpbxProduct.Hide();
                 radgrpbxPerson.Hide();
+            }
+            if (radtrvwMenu.SelectedNode.Text == "Define Categories")
+            {
+                Views.CategoryFrm Ref_CategoryFrm = new Views.CategoryFrm();
+                Ref_CategoryFrm.Show();
+                radgrpbxPerson.Hide();
+                radgrpbxProduct.Hide();
             }
         }
         #endregion
@@ -224,6 +233,7 @@ namespace ShoppingStore
         {
             radgvPeople.Columns["PersonId"].IsVisible = false;
             radmlticlmncmbbxCategory.Columns["CategoryId"].IsVisible = false;
+            radmlticlmncmbbxCategory.Columns["NumberOfProducts"].IsVisible = false;
             radgvProducts.Columns["ProductId"].IsVisible = false;
         }
         #endregion
@@ -295,7 +305,7 @@ namespace ShoppingStore
 
         private void RadbtnProductEdit_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(label2.Text))
+            if (string.IsNullOrWhiteSpace(lblProductId.Text))
             {
                 RadMessageBox.ThemeName = "Office2013Light";
                 RadMessageBox.Show("Choose a record to edit");
@@ -344,5 +354,19 @@ namespace ShoppingStore
                 FillProductsGrid();
             }
         }
+
+        #region [- SetColumnSize() -]
+        private void SetColumnSize()
+        {
+            radgvProducts.TableElement.RowHeight = 200;
+            radgvProducts.Columns[1].Width = 100;
+            radgvProducts.Columns[2].Width = 100;
+            radgvProducts.Columns[3].Width = 100;
+            radgvProducts.Columns[4].Width = 100;
+            radgvProducts.Columns[5].Width = 100;
+            radgvProducts.Columns[6].Width = 100;
+            radgvProducts.Columns[7].Width = 230;
+        } 
+        #endregion
     }
 }

@@ -25,10 +25,10 @@ namespace ShoppingStore.Views
             FillradmlticlmncmbbxSalesperson();
             FillradmlticlmncmbbxCustomer();
             FillOrderDate();
-            FillradchcklstbxProducts();
-            //FillContactInfo();
             Initializeradmlticlmncmbbx();
+            FillradlstvwProducts();
             HideColumns();
+            
         }
 
         private void FillradmlticlmncmbbxSalesperson()
@@ -43,28 +43,17 @@ namespace ShoppingStore.Views
         {
             lblOrderDate.Text = Convert.ToString(DateTime.Now);
         }
-        private void FillradchcklstbxProducts()
-        {
-            radchckdlstbxProducts.DataSource = Ref_ProductViewModel.Refresh();
-            radchckdlstbxProducts.DisplayMember = "ProductName";
-            radchckdlstbxProducts.DisplayMember += "UnitPrice";
-        }
-
-        private void FillContactInfo()
-        {
-            lblSalespersonId.Text = radmlticlmncmbbxSalesperson.MultiColumnComboBoxElement.EditorControl.Rows[radmlticlmncmbbxSalesperson.MultiColumnComboBoxElement.SelectedIndex].Cells["PersonId"].Value.ToString();
-            lblCustomerId.Text = radmlticlmncmbbxCustomer.MultiColumnComboBoxElement.EditorControl.Rows[radmlticlmncmbbxCustomer.MultiColumnComboBoxElement.SelectedIndex].Cells["PersonId"].Value.ToString();
-            if (lblSalespersonId.Text == lblCustomerId.Text)
-            {
-                RadMessageBox.ThemeName = "Office2013Light";
-                RadMessageBox.Show("Salesperson and customer should not be the same");
-            }
-        }
 
         private void Initializeradmlticlmncmbbx()
         {
             radmlticlmncmbbxSalesperson.Text = "Select a salesperson for this order...";
             radmlticlmncmbbxCustomer.Text = "Select a customer for this order...";
+        }
+
+        private void FillradlstvwProducts()
+        {
+            radlstvwProducts.DataSource = Ref_ProductViewModel.Refresh();
+            radlstvwProducts.DisplayMember = "ProductName";
         }
 
         private void HideColumns()
@@ -104,6 +93,30 @@ namespace ShoppingStore.Views
                 radmlticlmncmbbxCustomer.MultiColumnComboBoxElement.EditorControl.Rows[radmlticlmncmbbxCustomer.MultiColumnComboBoxElement.SelectedIndex].Cells["Country"].Value.ToString();
 
 
+        }
+
+        private void RadbtnAdd_Click(object sender, EventArgs e)
+        {
+            if(nmrcupdwnQuantity.Value == 0)
+            {
+                RadMessageBox.ThemeName = "Office2013Light";
+                RadMessageBox.Show("You should choose product's quantity");
+            }
+            if (nmrcupdwnQuantity.Value > 0) 
+            {
+                radgvOrderedProducts.Columns.Add("Product Code");
+                radgvOrderedProducts.Columns.Add("Product Name");
+                radgvOrderedProducts.Columns.Add("Category");
+                radgvOrderedProducts.Columns.Add("Quantity");
+                radgvOrderedProducts.Columns.Add("Price");
+
+                
+                radgvOrderedProducts.Rows.Add("","", "", nmrcupdwnQuantity.Value, "");
+
+
+                
+
+            }
         }
     }
 }

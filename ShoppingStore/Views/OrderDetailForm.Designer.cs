@@ -39,6 +39,7 @@
             this.lblFinalPrice = new System.Windows.Forms.Label();
             this.lblOrderTotalPrice = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.radbtnOrderRemove = new Telerik.WinControls.UI.RadButton();
             this.radbtnClearAll = new Telerik.WinControls.UI.RadButton();
             this.radbtnSubmit = new Telerik.WinControls.UI.RadButton();
             this.lblOrderCode = new System.Windows.Forms.Label();
@@ -46,39 +47,38 @@
             this.lblOrderDate = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.radgrpbxOrderedProducts = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.radbtnOrderRemove = new Telerik.WinControls.UI.RadButton();
+            this.radgvOrderedProducts = new Telerik.WinControls.UI.RadGridView();
             this.radgrpbxContactInfo = new Telerik.WinControls.UI.RadGroupBox();
+            this.lblCustomerAddress = new System.Windows.Forms.Label();
+            this.lblSalespersonAddress = new System.Windows.Forms.Label();
+            this.lblCustomerName = new System.Windows.Forms.Label();
+            this.lblSalespersonName = new System.Windows.Forms.Label();
+            this.lblCustomerInfo = new System.Windows.Forms.Label();
+            this.lblSalespersonInfo = new System.Windows.Forms.Label();
             this.radgrpbxDetail = new Telerik.WinControls.UI.RadGroupBox();
+            this.lblCustomerId = new System.Windows.Forms.Label();
+            this.lblSalespersonId = new System.Windows.Forms.Label();
             this.nmrcupdwnQuantity = new System.Windows.Forms.NumericUpDown();
             this.radmlticlmncmbbxCustomer = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.radmlticlmncmbbxSalesperson = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.radbtnAdd = new Telerik.WinControls.UI.RadButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.radchckdlstbxProducts = new Telerik.WinControls.UI.RadCheckedListBox();
             this.lblCustomer = new System.Windows.Forms.Label();
             this.lblSalesperson = new System.Windows.Forms.Label();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.lblSalespersonInfo = new System.Windows.Forms.Label();
-            this.lblCustomerInfo = new System.Windows.Forms.Label();
-            this.lblSalespersonName = new System.Windows.Forms.Label();
-            this.lblCustomerName = new System.Windows.Forms.Label();
-            this.lblSalespersonAddress = new System.Windows.Forms.Label();
-            this.lblCustomerAddress = new System.Windows.Forms.Label();
-            this.lblSalespersonId = new System.Windows.Forms.Label();
-            this.lblCustomerId = new System.Windows.Forms.Label();
+            this.radlstvwProducts = new Telerik.WinControls.UI.RadListView();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxSummary)).BeginInit();
             this.radgrpbxSummary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPrice)).BeginInit();
             this.radgrpbxPrice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radbtnOrderRemove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnClearAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnSubmit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxOrderedProducts)).BeginInit();
             this.radgrpbxOrderedProducts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radbtnOrderRemove)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radgvOrderedProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radgvOrderedProducts.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxContactInfo)).BeginInit();
             this.radgrpbxContactInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxDetail)).BeginInit();
@@ -91,7 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radmlticlmncmbbxSalesperson.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radmlticlmncmbbxSalesperson.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radchckdlstbxProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radlstvwProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,6 +177,15 @@
             this.lblTotalPrice.TabIndex = 0;
             this.lblTotalPrice.Text = "Total Price :";
             // 
+            // radbtnOrderRemove
+            // 
+            this.radbtnOrderRemove.Location = new System.Drawing.Point(359, 404);
+            this.radbtnOrderRemove.Name = "radbtnOrderRemove";
+            this.radbtnOrderRemove.Size = new System.Drawing.Size(84, 22);
+            this.radbtnOrderRemove.TabIndex = 8;
+            this.radbtnOrderRemove.Text = "Remove";
+            this.radbtnOrderRemove.ThemeName = "Office2013Light";
+            // 
             // radbtnClearAll
             // 
             this.radbtnClearAll.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,7 +252,7 @@
             // radgrpbxOrderedProducts
             // 
             this.radgrpbxOrderedProducts.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radgrpbxOrderedProducts.Controls.Add(this.radGridView1);
+            this.radgrpbxOrderedProducts.Controls.Add(this.radgvOrderedProducts);
             this.radgrpbxOrderedProducts.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radgrpbxOrderedProducts.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radgrpbxOrderedProducts.HeaderText = "Ordered Products";
@@ -256,25 +265,16 @@
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxOrderedProducts.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.Empty;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxOrderedProducts.GetChildAt(0).GetChildAt(1).GetChildAt(0))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
             // 
-            // radGridView1
+            // radgvOrderedProducts
             // 
-            this.radGridView1.Location = new System.Drawing.Point(5, 30);
+            this.radgvOrderedProducts.Location = new System.Drawing.Point(5, 31);
             // 
             // 
             // 
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.Size = new System.Drawing.Size(417, 169);
-            this.radGridView1.TabIndex = 9;
-            // 
-            // radbtnOrderRemove
-            // 
-            this.radbtnOrderRemove.Location = new System.Drawing.Point(359, 404);
-            this.radbtnOrderRemove.Name = "radbtnOrderRemove";
-            this.radbtnOrderRemove.Size = new System.Drawing.Size(84, 22);
-            this.radbtnOrderRemove.TabIndex = 8;
-            this.radbtnOrderRemove.Text = "Remove";
-            this.radbtnOrderRemove.ThemeName = "Office2013Light";
+            this.radgvOrderedProducts.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radgvOrderedProducts.Name = "radgvOrderedProducts";
+            this.radgvOrderedProducts.Size = new System.Drawing.Size(417, 168);
+            this.radgvOrderedProducts.TabIndex = 9;
             // 
             // radgrpbxContactInfo
             // 
@@ -298,9 +298,72 @@
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxContactInfo.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.Empty;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radgrpbxContactInfo.GetChildAt(0).GetChildAt(1).GetChildAt(0))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
             // 
+            // lblCustomerAddress
+            // 
+            this.lblCustomerAddress.AutoSize = true;
+            this.lblCustomerAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerAddress.Location = new System.Drawing.Point(235, 56);
+            this.lblCustomerAddress.Name = "lblCustomerAddress";
+            this.lblCustomerAddress.Size = new System.Drawing.Size(38, 15);
+            this.lblCustomerAddress.TabIndex = 5;
+            this.lblCustomerAddress.Text = "label3";
+            // 
+            // lblSalespersonAddress
+            // 
+            this.lblSalespersonAddress.AutoSize = true;
+            this.lblSalespersonAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalespersonAddress.Location = new System.Drawing.Point(17, 56);
+            this.lblSalespersonAddress.Name = "lblSalespersonAddress";
+            this.lblSalespersonAddress.Size = new System.Drawing.Size(38, 15);
+            this.lblSalespersonAddress.TabIndex = 4;
+            this.lblSalespersonAddress.Text = "label3";
+            // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerName.Location = new System.Drawing.Point(307, 34);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(39, 15);
+            this.lblCustomerName.TabIndex = 3;
+            this.lblCustomerName.Text = "label2";
+            // 
+            // lblSalespersonName
+            // 
+            this.lblSalespersonName.AutoSize = true;
+            this.lblSalespersonName.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalespersonName.Location = new System.Drawing.Point(96, 34);
+            this.lblSalespersonName.Name = "lblSalespersonName";
+            this.lblSalespersonName.Size = new System.Drawing.Size(39, 15);
+            this.lblSalespersonName.TabIndex = 2;
+            this.lblSalespersonName.Text = "label2";
+            // 
+            // lblCustomerInfo
+            // 
+            this.lblCustomerInfo.AutoSize = true;
+            this.lblCustomerInfo.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lblCustomerInfo.Location = new System.Drawing.Point(235, 33);
+            this.lblCustomerInfo.Name = "lblCustomerInfo";
+            this.lblCustomerInfo.Size = new System.Drawing.Size(66, 15);
+            this.lblCustomerInfo.TabIndex = 1;
+            this.lblCustomerInfo.Text = "Customer :";
+            // 
+            // lblSalespersonInfo
+            // 
+            this.lblSalespersonInfo.AutoSize = true;
+            this.lblSalespersonInfo.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalespersonInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lblSalespersonInfo.Location = new System.Drawing.Point(14, 33);
+            this.lblSalespersonInfo.Name = "lblSalespersonInfo";
+            this.lblSalespersonInfo.Size = new System.Drawing.Size(76, 15);
+            this.lblSalespersonInfo.TabIndex = 0;
+            this.lblSalespersonInfo.Text = "Salesperson :";
+            // 
             // radgrpbxDetail
             // 
             this.radgrpbxDetail.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radgrpbxDetail.Controls.Add(this.radlstvwProducts);
             this.radgrpbxDetail.Controls.Add(this.lblCustomerId);
             this.radgrpbxDetail.Controls.Add(this.lblSalespersonId);
             this.radgrpbxDetail.Controls.Add(this.nmrcupdwnQuantity);
@@ -309,7 +372,6 @@
             this.radgrpbxDetail.Controls.Add(this.lblQuantity);
             this.radgrpbxDetail.Controls.Add(this.radbtnAdd);
             this.radgrpbxDetail.Controls.Add(this.label1);
-            this.radgrpbxDetail.Controls.Add(this.radchckdlstbxProducts);
             this.radgrpbxDetail.Controls.Add(this.lblCustomer);
             this.radgrpbxDetail.Controls.Add(this.lblSalesperson);
             this.radgrpbxDetail.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -332,6 +394,28 @@
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radgrpbxDetail.GetChildAt(0).GetChildAt(1).GetChildAt(1))).TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(60)))), ((int)(((byte)(203)))));
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radgrpbxDetail.GetChildAt(0).GetChildAt(1).GetChildAt(1))).TopShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(60)))), ((int)(((byte)(203)))));
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radgrpbxDetail.GetChildAt(0).GetChildAt(1).GetChildAt(1))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
+            // 
+            // lblCustomerId
+            // 
+            this.lblCustomerId.AutoSize = true;
+            this.lblCustomerId.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerId.Location = new System.Drawing.Point(256, 140);
+            this.lblCustomerId.Name = "lblCustomerId";
+            this.lblCustomerId.Size = new System.Drawing.Size(22, 13);
+            this.lblCustomerId.TabIndex = 14;
+            this.lblCustomerId.Text = "id2";
+            this.lblCustomerId.Visible = false;
+            // 
+            // lblSalespersonId
+            // 
+            this.lblSalespersonId.AutoSize = true;
+            this.lblSalespersonId.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalespersonId.Location = new System.Drawing.Point(256, 59);
+            this.lblSalespersonId.Name = "lblSalespersonId";
+            this.lblSalespersonId.Size = new System.Drawing.Size(21, 13);
+            this.lblSalespersonId.TabIndex = 13;
+            this.lblSalespersonId.Text = "id1";
+            this.lblSalespersonId.Visible = false;
             // 
             // nmrcupdwnQuantity
             // 
@@ -425,6 +509,7 @@
             this.radbtnAdd.TabIndex = 7;
             this.radbtnAdd.Text = "Add";
             this.radbtnAdd.ThemeName = "Office2013Light";
+            this.radbtnAdd.Click += new System.EventHandler(this.RadbtnAdd_Click);
             // 
             // label1
             // 
@@ -435,13 +520,6 @@
             this.label1.Size = new System.Drawing.Size(188, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "What would you like to order?";
-            // 
-            // radchckdlstbxProducts
-            // 
-            this.radchckdlstbxProducts.Location = new System.Drawing.Point(25, 261);
-            this.radchckdlstbxProducts.Name = "radchckdlstbxProducts";
-            this.radchckdlstbxProducts.Size = new System.Drawing.Size(282, 235);
-            this.radchckdlstbxProducts.TabIndex = 4;
             // 
             // lblCustomer
             // 
@@ -463,87 +541,12 @@
             this.lblSalesperson.TabIndex = 1;
             this.lblSalesperson.Text = "Salesperson :";
             // 
-            // lblSalespersonInfo
+            // radlstvwProducts
             // 
-            this.lblSalespersonInfo.AutoSize = true;
-            this.lblSalespersonInfo.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalespersonInfo.ForeColor = System.Drawing.Color.DimGray;
-            this.lblSalespersonInfo.Location = new System.Drawing.Point(14, 33);
-            this.lblSalespersonInfo.Name = "lblSalespersonInfo";
-            this.lblSalespersonInfo.Size = new System.Drawing.Size(76, 15);
-            this.lblSalespersonInfo.TabIndex = 0;
-            this.lblSalespersonInfo.Text = "Salesperson :";
-            // 
-            // lblCustomerInfo
-            // 
-            this.lblCustomerInfo.AutoSize = true;
-            this.lblCustomerInfo.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerInfo.ForeColor = System.Drawing.Color.DimGray;
-            this.lblCustomerInfo.Location = new System.Drawing.Point(235, 33);
-            this.lblCustomerInfo.Name = "lblCustomerInfo";
-            this.lblCustomerInfo.Size = new System.Drawing.Size(66, 15);
-            this.lblCustomerInfo.TabIndex = 1;
-            this.lblCustomerInfo.Text = "Customer :";
-            // 
-            // lblSalespersonName
-            // 
-            this.lblSalespersonName.AutoSize = true;
-            this.lblSalespersonName.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalespersonName.Location = new System.Drawing.Point(96, 34);
-            this.lblSalespersonName.Name = "lblSalespersonName";
-            this.lblSalespersonName.Size = new System.Drawing.Size(39, 15);
-            this.lblSalespersonName.TabIndex = 2;
-            this.lblSalespersonName.Text = "label2";
-            // 
-            // lblCustomerName
-            // 
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(307, 34);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(39, 15);
-            this.lblCustomerName.TabIndex = 3;
-            this.lblCustomerName.Text = "label2";
-            // 
-            // lblSalespersonAddress
-            // 
-            this.lblSalespersonAddress.AutoSize = true;
-            this.lblSalespersonAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalespersonAddress.Location = new System.Drawing.Point(17, 56);
-            this.lblSalespersonAddress.Name = "lblSalespersonAddress";
-            this.lblSalespersonAddress.Size = new System.Drawing.Size(38, 15);
-            this.lblSalespersonAddress.TabIndex = 4;
-            this.lblSalespersonAddress.Text = "label3";
-            // 
-            // lblCustomerAddress
-            // 
-            this.lblCustomerAddress.AutoSize = true;
-            this.lblCustomerAddress.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerAddress.Location = new System.Drawing.Point(235, 56);
-            this.lblCustomerAddress.Name = "lblCustomerAddress";
-            this.lblCustomerAddress.Size = new System.Drawing.Size(38, 15);
-            this.lblCustomerAddress.TabIndex = 5;
-            this.lblCustomerAddress.Text = "label3";
-            // 
-            // lblSalespersonId
-            // 
-            this.lblSalespersonId.AutoSize = true;
-            this.lblSalespersonId.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalespersonId.Location = new System.Drawing.Point(256, 59);
-            this.lblSalespersonId.Name = "lblSalespersonId";
-            this.lblSalespersonId.Size = new System.Drawing.Size(21, 13);
-            this.lblSalespersonId.TabIndex = 13;
-            this.lblSalespersonId.Text = "id1";
-            // 
-            // lblCustomerId
-            // 
-            this.lblCustomerId.AutoSize = true;
-            this.lblCustomerId.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerId.Location = new System.Drawing.Point(256, 140);
-            this.lblCustomerId.Name = "lblCustomerId";
-            this.lblCustomerId.Size = new System.Drawing.Size(22, 13);
-            this.lblCustomerId.TabIndex = 14;
-            this.lblCustomerId.Text = "id2";
+            this.radlstvwProducts.Location = new System.Drawing.Point(25, 252);
+            this.radlstvwProducts.Name = "radlstvwProducts";
+            this.radlstvwProducts.Size = new System.Drawing.Size(283, 244);
+            this.radlstvwProducts.TabIndex = 15;
             // 
             // OrderDetailFrm
             // 
@@ -567,13 +570,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxPrice)).EndInit();
             this.radgrpbxPrice.ResumeLayout(false);
             this.radgrpbxPrice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radbtnOrderRemove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnClearAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnSubmit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxOrderedProducts)).EndInit();
             this.radgrpbxOrderedProducts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radbtnOrderRemove)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radgvOrderedProducts.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radgvOrderedProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxContactInfo)).EndInit();
             this.radgrpbxContactInfo.ResumeLayout(false);
             this.radgrpbxContactInfo.PerformLayout();
@@ -588,7 +591,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radmlticlmncmbbxSalesperson.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radmlticlmncmbbxSalesperson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radchckdlstbxProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radlstvwProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -610,7 +613,7 @@
         private System.Windows.Forms.Label lblOrderDate;
         private System.Windows.Forms.Label lblDate;
         private Telerik.WinControls.UI.RadGroupBox radgrpbxOrderedProducts;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
+        private Telerik.WinControls.UI.RadGridView radgvOrderedProducts;
         private Telerik.WinControls.UI.RadButton radbtnOrderRemove;
         private Telerik.WinControls.UI.RadGroupBox radgrpbxContactInfo;
         private Telerik.WinControls.UI.RadGroupBox radgrpbxDetail;
@@ -620,7 +623,6 @@
         private System.Windows.Forms.Label lblQuantity;
         private Telerik.WinControls.UI.RadButton radbtnAdd;
         private System.Windows.Forms.Label label1;
-        private Telerik.WinControls.UI.RadCheckedListBox radchckdlstbxProducts;
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.Label lblSalesperson;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
@@ -632,5 +634,6 @@
         private System.Windows.Forms.Label lblSalespersonInfo;
         private System.Windows.Forms.Label lblCustomerId;
         private System.Windows.Forms.Label lblSalespersonId;
+        private Telerik.WinControls.UI.RadListView radlstvwProducts;
     }
 }

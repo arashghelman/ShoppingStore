@@ -14,7 +14,7 @@ namespace ShoppingStore.Models.Helper.Product
         public string CategoryName { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal Discount { get; set; }
-        public decimal ProductPrice { get; set; }
+        public decimal Price { get; set; }
         public byte[] ProductPhoto { get; set; }
     }
 }

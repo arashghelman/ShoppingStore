@@ -48,7 +48,7 @@ BEGIN TRAN
 		c.CategoryName, 
 		p.UnitPrice, 
 		p.Discount, 
-		p.UnitPrice - p.Discount as [Product Price], 
+		p.UnitPrice - p.Discount as Price, 
 		p.ProductPhoto
 		from dbo.Product p inner join dbo.Category c 
 		on p.Category_Ref = c.CategoryId

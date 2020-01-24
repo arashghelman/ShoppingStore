@@ -53,8 +53,10 @@ CREATE PROCEDURE usp_SelectCategory
 AS
 BEGIN TRAN
 BEGIN TRY
-select c.CategoryId,c.CategoryName
-from dbo.Category c
+select c.CategoryId,c.CategoryName, COUNT(p.ProductId) as [NumberOfProducts]
+from dbo.Category c left join dbo.Product p
+on c.CategoryId = p.Category_Ref
+group by c.CategoryId,c.CategoryName
 COMMIT TRAN
 END TRY
 BEGIN CATCH
