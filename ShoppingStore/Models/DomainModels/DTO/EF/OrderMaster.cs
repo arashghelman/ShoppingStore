@@ -23,8 +23,8 @@ namespace ShoppingStore.Models.DomainModels.DTO.EF
         public int OrderId { get; set; }
         public int SalespersonId { get; set; }
         public int CustomerId { get; set; }
-        public Nullable<int> OrderCode { get; set; }
-        public Nullable<int> OrderDate { get; set; }
+        public int OrderCode { get; set; }
+        public System.DateTime OrderDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

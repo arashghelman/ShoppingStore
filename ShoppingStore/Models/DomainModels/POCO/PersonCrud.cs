@@ -18,7 +18,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- List<Helper.Person.PersonSelectHelper> SelectBySP() -]
         public List<Helper.Person.PersonSelectHelper> SelectBySP()
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 List<Helper.Person.PersonSelectHelper> personSelectHelperList = new List<Helper.Person.PersonSelectHelper>();
                 try
@@ -39,7 +39,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- SaveBySP(List<Models.Helper.Person.PersonSaveHelper> personSaveHelperList) -]
         public void SaveBySP(List<Helper.Person.PersonSaveHelper> personSaveHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {
@@ -64,7 +64,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- RemoveBySP(List<Helper.Person.PersonRemoveHelper> personRemoveHelperList) -]
         public void RemoveBySP(List<Helper.Person.PersonRemoveHelper> personRemoveHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {
@@ -89,7 +89,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- EditBySP(List<Helper.Person.PersonEditHelper> personEditHelperList) -]
         public void EditBySP(List<Helper.Person.PersonEditHelper> personEditHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {

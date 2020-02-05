@@ -11,7 +11,7 @@ namespace ShoppingStore.Models.Helper.Order
     {
         public const string usp_InsertOrder = "dbo.usp_InsertOrder @insertOrderMasterList, @insertOrderDetailList";
         public const string usp_UpdateOrder = "dbo.usp_UpdateOrder @updateOrderMasterList, @updateOrderDetailList";
-        public const string usp_DeleteOrder = "dbo.usp_DeleteOrder @orderMasterDeleteList";
+        public const string usp_DeleteOrder = "dbo.usp_DeleteOrder @orderMasterDeleteList, @orderDetailDeleteList";
         public const string usp_DeleteOrderProducts = "dbo.usp_DeleteOrderProducts @deleteOrderProductList";
         public const string usp_SelectOrderMaster = "exec dbo.usp_SelectOrderMaster";
         public const string usp_SelectOrderDetail = "exec dbo.usp_SelectOrderDetail";

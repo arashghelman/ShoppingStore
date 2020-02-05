@@ -18,7 +18,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- List<Helper.Order.OrderMasterSelectHelper> SelectMasterBySP() -]
         public List<Helper.Order.OrderMasterSelectHelper> SelectMasterBySP()
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 List<Helper.Order.OrderMasterSelectHelper> orderMasterSelectHelperList = new List<Helper.Order.OrderMasterSelectHelper>();
                 try
@@ -45,7 +45,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- List<Helper.Order.OrderDetailSelectHelper> SelectDetailBySP() -]
         public List<Helper.Order.OrderDetailSelectHelper> SelectDetailBySP()
         {
-            using (var context = new Models.DomainModels.DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new Models.DomainModels.DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 List<Helper.Order.OrderDetailSelectHelper> orderDetailSelectHelperList = new List<Helper.Order.OrderDetailSelectHelper>();
                 try
@@ -72,7 +72,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- SaveBySP(List<Helper.Order.OrderMasterSaveHelper> orderMasterSaveHelperList, List<Helper.Order.OrderDetailSaveHelper> orderDetailSaveHelperList) -]
         public void SaveBySP(List<Helper.Order.OrderMasterSaveHelper> orderMasterSaveHelperList, List<Helper.Order.OrderDetailSaveHelper> orderDetailSaveHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {
@@ -97,7 +97,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- EditBySP(List<Helper.Order.OrderMasterEditHelper> orderMasterEditHelperList, List<Helper.Order.OrderDetailEditHelper> orderDetailEditHelperList) -]
         public void EditBySP(List<Helper.Order.OrderMasterEditHelper> orderMasterEditHelperList, List<Helper.Order.OrderDetailEditHelper> orderDetailEditHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {
@@ -122,7 +122,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- RemoveBySP(List<Helper.Order.OrderMasterRemoveHelper> orderMasterRemoveHelperList, List<Helper.Order.OrderDetailRemoveHelper> orderDetailRemoveHelperList) -]
         public void RemoveBySP(List<Helper.Order.OrderMasterRemoveHelper> orderMasterRemoveHelperList, List<Helper.Order.OrderDetailRemoveHelper> orderDetailRemoveHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {
@@ -147,7 +147,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- RemoveProductBySP(List<Helper.Order.OrderProductRemoveHelper> orderProductRemoveHelperList) -]
         public void RemoveProductBySP(List<Helper.Order.OrderProductRemoveHelper> orderProductRemoveHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {

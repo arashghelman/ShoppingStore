@@ -18,7 +18,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- List<Helper.Product.ProductSelectHelper> SelectBySP() -]
         public List<Helper.Product.ProductSelectHelper> SelectBySP()
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 List<Helper.Product.ProductSelectHelper> productSelectHelperList = new List<Helper.Product.ProductSelectHelper>();
                 try
@@ -45,7 +45,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- SaveBySP(List<Helper.Product.ProductSaveHelper> productSaveHelperList) -]
         public void SaveBySP(List<Helper.Product.ProductSaveHelper> productSaveHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {
@@ -70,7 +70,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- EditBySP(List<Helper.Product.ProductEditHelper> productEditHelperList) -]
         public void EditBySP(List<Helper.Product.ProductEditHelper> productEditHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {
@@ -95,7 +95,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- RemoveBySP(List<Helper.Product.ProductRemoveHelper> productRemoveHelperList) -]
         public void RemoveBySP(List<Helper.Product.ProductRemoveHelper> productRemoveHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {

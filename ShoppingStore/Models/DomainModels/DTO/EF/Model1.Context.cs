@@ -15,10 +15,10 @@ namespace ShoppingStore.Models.DomainModels.DTO.EF
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class ShoppingStoreDBFirstEntities : DbContext
+    public partial class ShoppingStoreDBFirstEntities1 : DbContext
     {
-        public ShoppingStoreDBFirstEntities()
-            : base("name=ShoppingStoreDBFirstEntities")
+        public ShoppingStoreDBFirstEntities1()
+            : base("name=ShoppingStoreDBFirstEntities1")
         {
         }
     
@@ -33,6 +33,21 @@ namespace ShoppingStore.Models.DomainModels.DTO.EF
         public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<Product> Products { get; set; }
     
+        public virtual int usp_DeleteCategory()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_DeleteCategory");
+        }
+    
+        public virtual int usp_DeleteOrder()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_DeleteOrder");
+        }
+    
+        public virtual int usp_DeleteOrderProducts()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_DeleteOrderProducts");
+        }
+    
         public virtual int usp_DeletePerson()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_DeletePerson");
@@ -41,6 +56,16 @@ namespace ShoppingStore.Models.DomainModels.DTO.EF
         public virtual int usp_DeleteProduct()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_DeleteProduct");
+        }
+    
+        public virtual int usp_InsertCategory()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertCategory");
+        }
+    
+        public virtual int usp_InsertOrder()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertOrder");
         }
     
         public virtual int usp_InsertPerson()
@@ -53,9 +78,19 @@ namespace ShoppingStore.Models.DomainModels.DTO.EF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertProduct");
         }
     
-        public virtual ObjectResult<string> usp_SelectCategory()
+        public virtual ObjectResult<usp_SelectCategory_Result> usp_SelectCategory()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("usp_SelectCategory");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_SelectCategory_Result>("usp_SelectCategory");
+        }
+    
+        public virtual ObjectResult<usp_SelectOrderDetail_Result> usp_SelectOrderDetail()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_SelectOrderDetail_Result>("usp_SelectOrderDetail");
+        }
+    
+        public virtual ObjectResult<usp_SelectOrderMaster_Result> usp_SelectOrderMaster()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_SelectOrderMaster_Result>("usp_SelectOrderMaster");
         }
     
         public virtual ObjectResult<usp_SelectPerson_Result> usp_SelectPerson()
@@ -66,6 +101,16 @@ namespace ShoppingStore.Models.DomainModels.DTO.EF
         public virtual ObjectResult<usp_SelectProduct_Result> usp_SelectProduct()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_SelectProduct_Result>("usp_SelectProduct");
+        }
+    
+        public virtual int usp_UpdateCategory()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_UpdateCategory");
+        }
+    
+        public virtual int usp_UpdateOrder()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_UpdateOrder");
         }
     
         public virtual int usp_UpdatePerson()

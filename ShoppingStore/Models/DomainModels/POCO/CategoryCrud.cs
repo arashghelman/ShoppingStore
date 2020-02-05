@@ -18,7 +18,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         #region [- List<Helper.Category.CategorySelectHelper> SelectBySP() -]
         public List<Helper.Category.CategorySelectHelper> SelectBySP()
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 List<Helper.Category.CategorySelectHelper> categorySelectHelperList = new List<Helper.Category.CategorySelectHelper>();
                 try
@@ -37,7 +37,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
 
         public void SaveBySP(List<Helper.Category.CategorySaveHelper> categorySaveHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {
@@ -59,7 +59,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         }
         public void EditBySP(List<Helper.Category.CategoryEditHelper> categoryEditHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {
@@ -81,7 +81,7 @@ namespace ShoppingStore.Models.DomainModels.POCO
         }
         public void RemoveBySP(List<Helper.Category.CategoryRemoveHelper> categoryRemoveHelperList)
         {
-            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities())
+            using (var context = new DTO.EF.ShoppingStoreDBFirstEntities1())
             {
                 try
                 {

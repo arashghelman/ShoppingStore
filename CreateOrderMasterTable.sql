@@ -4,6 +4,7 @@
 	SalespersonId int foreign key references Person (PersonId) not null,
 	CustomerId int foreign key references Person (PersonId) not null,
     OrderCode int,
-	OrderDate int,
+	OrderDate as getdate(),
 	unique (SalespersonId, CustomerId)
 )
+

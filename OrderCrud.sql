@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_InsertOrder
+﻿alter PROCEDURE usp_InsertOrder
 @insertOrderMasterList udt_InsertOrderMasterList READONLY,
 @insertOrderDetailList udt_InsertOrderDetailList READONLY
 AS
@@ -17,13 +17,15 @@ BEGIN TRAN
 		set @orderIdCount = (select COUNT(OrderId) from dbo.OrderMaster)
 		declare @index int
 		set @index = 0
+
 		WHILE( @index <= @orderIdCount )
 		BEGIN
-				insert into dbo.OrderDetail(OrderId,ProductId,Quantity)
-				select @orderMasterId,productId,quantity from @insertOrderDetailList dl
-				order by dl.productId offset @index rows fetch next 1 rows only
-				set @index = @index + 1
-		END	
+		insert into dbo.OrderDetail(OrderId,ProductId,Quantity)
+        select @orderMasterId,productId,quantity from @insertOrderDetailList
+		order by productId offset @index rows fetch next 1 rows only
+		set @index = @index + 1
+		END
+
 	END 
 	COMMIT TRAN
 	END TRY
@@ -67,9 +69,9 @@ AS
 BEGIN TRAN
 	BEGIN TRY
 		delete from dbo.OrderDetail
-		where OrderId = (select orderId from @orderMasterDeleteList)
+		where OrderId = (select dl.OrderId from @orderDetailDeleteList dl)
 		delete from dbo.OrderMaster
-		where OrderId = (select orderId from @orderMasterDeleteList)
+		where OrderId = (select ml.orderId from @orderMasterDeleteList ml)
 		COMMIT TRAN
 	END TRY
 	BEGIN CATCH
@@ -98,16 +100,17 @@ CREATE PROCEDURE usp_SelectOrderMaster
 AS
 BEGIN TRAN
 	BEGIN TRY
-		select o.OrderCode, 
+		select o.OrderId
+		,o.OrderCode, 
 		o.OrderDate, 
-		p1.FirstName+' '+p1.LastName as [Salesperson Name],
-		p1.Company as [Salesperson Company], 
-		p1.PersonAddress+','+p1.City+','+p1.Country as [Salesperson Address],
-		p2.FirstName+' '+p2.LastName as [Customer Name],
-		p2.Company as [Customer Company],
-		p2.PersonAddress+','+p2.City+','+p2.Country as [Customer Address],
-		COUNT(od.ProductId) as [Number Of Ordered Products],
-		SUM((p3.UnitPrice-p3.Discount)*od.Quantity)* COUNT(od.ProductId) as [Total Price]
+		p1.FirstName+' '+p1.LastName as [SalespersonName],
+		p1.Company as [SalespersonCompany], 
+		p1.PersonAddress+','+p1.City+','+p1.Country as [SalespersonAddress],
+		p2.FirstName+' '+p2.LastName as [CustomerName],
+		p2.Company as [CustomerCompany],
+		p2.PersonAddress+','+p2.City+','+p2.Country as [CustomerAddress],
+		COUNT(od.ProductId) as [NumberOfOrderedProducts],
+		SUM((p3.UnitPrice-p3.Discount)*od.Quantity)* COUNT(od.ProductId) as [TotalPrice]
 		from 
 		OrderMaster o inner join dbo.Person p1
 		on o.SalespersonId = p1.PersonId 
@@ -117,7 +120,8 @@ BEGIN TRAN
 		on o.OrderId = od.OrderId
 		inner join dbo.Product p3 
 		on od.ProductId = p3.ProductId
-		group by o.OrderCode, 
+		group by o.OrderId,
+		o.OrderCode, 
 		o.OrderDate, 
 		p1.FirstName+' '+p1.LastName,
 		p1.Company, 

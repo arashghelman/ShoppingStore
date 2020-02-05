@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
@@ -90,6 +91,7 @@
             this.radtrvwMenu = new Telerik.WinControls.UI.RadTreeView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.uploadFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxProduct)).BeginInit();
             this.radgrpbxProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radbtnProductClose)).BeginInit();
@@ -143,7 +145,7 @@
             this.radgrpbxProduct.Controls.Add(this.radgrpbxProducts);
             this.radgrpbxProduct.Controls.Add(this.radgrpbxProductInformation);
             this.radgrpbxProduct.HeaderText = "";
-            this.radgrpbxProduct.Location = new System.Drawing.Point(634, 12);
+            this.radgrpbxProduct.Location = new System.Drawing.Point(202, 13);
             this.radgrpbxProduct.Name = "radgrpbxProduct";
             this.radgrpbxProduct.Size = new System.Drawing.Size(426, 525);
             this.radgrpbxProduct.TabIndex = 3;
@@ -599,6 +601,7 @@
             this.radtxtbxPersonPhone.Name = "radtxtbxPersonPhone";
             this.radtxtbxPersonPhone.Size = new System.Drawing.Size(119, 21);
             this.radtxtbxPersonPhone.TabIndex = 10;
+            this.radtxtbxPersonPhone.Enter += new System.EventHandler(this.RadtxtbxPersonPhone_Enter);
             // 
             // lblPersonPhone
             // 
@@ -687,6 +690,7 @@
             // 
             // radgvPeople
             // 
+            this.radgvPeople.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radgvPeople.Location = new System.Drawing.Point(6, 30);
             // 
             // 
@@ -714,7 +718,6 @@
             this.radtrvwMenu.Name = "radtrvwMenu";
             radTreeNode1.BackColor = System.Drawing.Color.LightSkyBlue;
             radTreeNode1.BackColor2 = System.Drawing.Color.White;
-            radTreeNode1.Expanded = true;
             radTreeNode1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             radTreeNode1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
             radTreeNode1.Name = "Node1";
@@ -775,7 +778,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1133, 550);
+            this.ClientSize = new System.Drawing.Size(641, 550);
             this.Controls.Add(this.radgrpbxProduct);
             this.Controls.Add(this.radgrpbxPerson);
             this.Controls.Add(this.radtrvwMenu);
@@ -891,5 +894,6 @@
         private Telerik.WinControls.UI.RadButton radbtnPersonClearAll;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProductId;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

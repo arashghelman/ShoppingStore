@@ -58,8 +58,8 @@ namespace ShoppingStore
         #region [- MainFrm_Load -]
         private void MainFrm_Load(object sender, EventArgs e)
         {
-            radgrpbxProduct.Hide();
-            radgrpbxPerson.Hide();
+            radgrpbxProduct.Visible = false;
+            radgrpbxPerson.Visible = false;
             FillPeopleGrid();
             FillProductsGrid();
             FillMultiColumnComboBoxCategory();
@@ -76,35 +76,37 @@ namespace ShoppingStore
             {
                 Views.OrderDetailFrm Ref_OrderDetailFrm = new Views.OrderDetailFrm();
                 Ref_OrderDetailFrm.Show();
-                radgrpbxProduct.Hide();
-                radgrpbxPerson.Hide();               
+                Ref_OrderDetailFrm.AddColumns();
+                //Ref_OrderDetailFrm.FillOrderCode();
+                radgrpbxProduct.Visible = false;
+                radgrpbxPerson.Visible = false;            
             }
 
             if (radtrvwMenu.SelectedNode.Text == "Define Product(s)")
             {
-                radgrpbxProduct.Show();
-                radgrpbxPerson.Hide();
+                radgrpbxProduct.Visible = true;
+                radgrpbxPerson.Visible = false;
             }
 
             if(radtrvwMenu.SelectedNode.Text == "Define People")
             {
-                radgrpbxPerson.Show();
-                radgrpbxProduct.Hide();
+                radgrpbxPerson.Visible = true;
+                radgrpbxProduct.Visible = false;
             }
 
             if(radtrvwMenu.SelectedNode.Text == "Manage Orders")
             {
                 Views.OrderManageFrm Ref_OrderManageFrm = new Views.OrderManageFrm();
                 Ref_OrderManageFrm.Show();
-                radgrpbxProduct.Hide();
-                radgrpbxPerson.Hide();
+                radgrpbxProduct.Visible = false;
+                radgrpbxPerson.Visible = false;
             }
             if (radtrvwMenu.SelectedNode.Text == "Define Categories")
             {
                 Views.CategoryFrm Ref_CategoryFrm = new Views.CategoryFrm();
                 Ref_CategoryFrm.Show();
-                radgrpbxPerson.Hide();
-                radgrpbxProduct.Hide();
+                radgrpbxProduct.Visible = false;
+                radgrpbxPerson.Visible = false;
             }
         }
         #endregion
@@ -113,14 +115,14 @@ namespace ShoppingStore
         #region [- RadbtnProductClose_Click -]
         private void RadbtnProductClose_Click(object sender, EventArgs e)
         {
-            radgrpbxProduct.Hide();
+            radgrpbxProduct.Visible = false;
         }
         #endregion       
 
         #region [- RadbtnPersonClose_Click -]
         private void RadbtnPersonClose_Click(object sender, EventArgs e)
         {
-            radgrpbxPerson.Hide();
+            radgrpbxPerson.Visible = false;
         } 
         #endregion
 
@@ -142,6 +144,7 @@ namespace ShoppingStore
         }
         #endregion
 
+        #region [- RadbtnProductAdd_Click -]
         private void RadbtnProductAdd_Click(object sender, EventArgs e)
         {
             Ref_ProductSaveHelper.ProductName = radtxtbxProductName.Text;
@@ -153,7 +156,9 @@ namespace ShoppingStore
             Ref_ProductViewModel.Save(ProductSaveHelperList);
             FillProductsGrid();
         }
+        #endregion
 
+        #region [- RadbtnPersonAdd_Click -]
         private void RadbtnPersonAdd_Click(object sender, EventArgs e)
         {
             Ref_PersonSaveHelper.FirstName = radtxtbxPersonFirstName.Text;
@@ -168,7 +173,8 @@ namespace ShoppingStore
             Ref_PersonViewModel.Save(PersonSaveHelperList);
             FillPeopleGrid();
             EmptyPersonFields();
-        }
+        } 
+        #endregion
 
         #region [- FillPeopleGrid() -]
         private void FillPeopleGrid()
@@ -191,6 +197,7 @@ namespace ShoppingStore
         }
         #endregion
 
+        #region [- RadgvPeople_CellClick -]
         private void RadgvPeople_CellClick(object sender, GridViewCellEventArgs e)
         {
             label1.Text = radgvPeople.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -203,7 +210,9 @@ namespace ShoppingStore
             radtxtbxPersonCountry.Text = radgvPeople.Rows[e.RowIndex].Cells[8].Value.ToString();
             radtxtbxPersonCompany.Text = radgvPeople.Rows[e.RowIndex].Cells[9].Value.ToString();
         }
+        #endregion
 
+        #region [- RadbtnPersonEdit_Click -]
         private void RadbtnPersonEdit_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(label1.Text))
@@ -226,7 +235,8 @@ namespace ShoppingStore
                 Ref_PersonViewModel.Edit(PersonEditHelperList);
                 FillPeopleGrid();
             }
-        }
+        } 
+        #endregion
 
         #region [- HideColumn() -]
         private void HideColumns()
@@ -238,6 +248,7 @@ namespace ShoppingStore
         }
         #endregion
 
+        #region [- RadbtnPersonRemove_Click -]
         private void RadbtnPersonRemove_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(label1.Text))
@@ -254,11 +265,14 @@ namespace ShoppingStore
                 EmptyPersonFields();
             }
         }
+        #endregion
 
+        #region [- RadbtnPersonClearAll_Click -]
         private void RadbtnPersonClearAll_Click(object sender, EventArgs e)
         {
             EmptyPersonFields();
-        }
+        } 
+        #endregion
 
         #region [- EmptyPersonFields() -]
         private void EmptyPersonFields()
@@ -275,6 +289,7 @@ namespace ShoppingStore
         }
         #endregion
 
+        #region [- EmptyProductFields() -]
         private void EmptyProductFields()
         {
             label2.Text = string.Empty;
@@ -283,7 +298,8 @@ namespace ShoppingStore
             radtxtbxProductDiscount.Text = string.Empty;
             lblProductFileName.Text = string.Empty;
             radmlticlmncmbbxCategory.Text = string.Empty;
-        }
+        } 
+        #endregion
 
         #region [- UpdateImage(object image) -]
         private byte[] UpdateImage(object image)
@@ -293,6 +309,7 @@ namespace ShoppingStore
         }
         #endregion
 
+        #region [- RadgvProducts_CellClick -]
         private void RadgvProducts_CellClick(object sender, GridViewCellEventArgs e)
         {
             lblProductId.Text = radgvProducts.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -302,7 +319,9 @@ namespace ShoppingStore
             radtxtbxProductDiscount.Text = radgvProducts.Rows[e.RowIndex].Cells[5].Value.ToString();
             ImageValue = radgvProducts.Rows[e.RowIndex].Cells[7].Value;
         }
+        #endregion
 
+        #region [- RadbtnProductEdit_Click_1 -]
         private void RadbtnProductEdit_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(lblProductId.Text))
@@ -338,7 +357,9 @@ namespace ShoppingStore
                 FillProductsGrid();
             }
         }
+        #endregion
 
+        #region [- RadbtnProductRemove_Click -]
         private void RadbtnProductRemove_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(lblProductId.Text))
@@ -353,7 +374,8 @@ namespace ShoppingStore
                 Ref_ProductViewModel.Remove(ProductRemoveHelperList);
                 FillProductsGrid();
             }
-        }
+        } 
+        #endregion
 
         #region [- SetColumnSize() -]
         private void SetColumnSize()
@@ -366,6 +388,26 @@ namespace ShoppingStore
             radgvProducts.Columns[5].Width = 100;
             radgvProducts.Columns[6].Width = 100;
             radgvProducts.Columns[7].Width = 230;
+            radgvPeople.Columns[1].Width = 100;
+            radgvPeople.Columns[2].Width = 100;
+            radgvPeople.Columns[3].Width = 100;
+            radgvPeople.Columns[4].Width = 100;
+            radgvPeople.Columns[5].Width = 100;
+            radgvPeople.Columns[6].Width = 100;
+            radgvPeople.Columns[7].Width = 100;
+            radgvPeople.Columns[8].Width = 100;
+            radgvPeople.Columns[9].Width = 100;
+        }
+
+
+        #endregion
+
+        #region [- RadtxtbxPersonPhone_Enter -]
+        private void RadtxtbxPersonPhone_Enter(object sender, EventArgs e)
+        {
+            RadTextBox radTextBox = (RadTextBox)sender;
+            int visibleTime = 4000;
+            toolTip1.Show("Should be in format: +(12 digits number)", radTextBox, 0, 0, visibleTime);
         } 
         #endregion
     }

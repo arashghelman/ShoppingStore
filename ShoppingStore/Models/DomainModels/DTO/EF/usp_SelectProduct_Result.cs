@@ -13,12 +13,13 @@ namespace ShoppingStore.Models.DomainModels.DTO.EF
     
     public partial class usp_SelectProduct_Result
     {
+        public int ProductId { get; set; }
         public Nullable<int> ProductCode { get; set; }
         public string ProductName { get; set; }
         public string CategoryName { get; set; }
         public decimal UnitPrice { get; set; }
         public Nullable<decimal> Discount { get; set; }
-        public Nullable<decimal> Product_Price { get; set; }
+        public Nullable<decimal> Price { get; set; }
         public byte[] ProductPhoto { get; set; }
     }
 }

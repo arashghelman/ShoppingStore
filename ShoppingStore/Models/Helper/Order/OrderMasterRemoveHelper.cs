@@ -8,6 +8,6 @@ namespace ShoppingStore.Models.Helper.Order
 {
     public class OrderMasterRemoveHelper
     {
-        public int OrderID { get; set; }
+        public int orderId { get; set; }
     }
 }

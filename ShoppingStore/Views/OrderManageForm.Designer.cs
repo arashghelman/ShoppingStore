@@ -38,6 +38,7 @@
             this.radbtnEdit = new Telerik.WinControls.UI.RadButton();
             this.radbtnNew = new Telerik.WinControls.UI.RadButton();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.lblOrderId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxOrders)).BeginInit();
             this.radgrpbxOrders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radgvOrders)).BeginInit();
@@ -78,6 +79,7 @@
             this.radgvOrders.Size = new System.Drawing.Size(397, 225);
             this.radgvOrders.TabIndex = 0;
             this.radgvOrders.ThemeName = "Office2013Light";
+            this.radgvOrders.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadgvOrders_CellClick);
             // 
             // radgrpbxButtons
             // 
@@ -100,6 +102,7 @@
             this.radbtnRemove.TabIndex = 2;
             this.radbtnRemove.Text = "Remove";
             this.radbtnRemove.ThemeName = "Office2013Light";
+            this.radbtnRemove.Click += new System.EventHandler(this.RadbtnRemove_Click);
             // 
             // radbtnEdit
             // 
@@ -121,11 +124,20 @@
             this.radbtnNew.ThemeName = "Office2013Light";
             this.radbtnNew.Click += new System.EventHandler(this.RadbtnNew_Click);
             // 
+            // lblOrderId
+            // 
+            this.lblOrderId.AutoSize = true;
+            this.lblOrderId.Location = new System.Drawing.Point(451, 12);
+            this.lblOrderId.Name = "lblOrderId";
+            this.lblOrderId.Size = new System.Drawing.Size(0, 17);
+            this.lblOrderId.TabIndex = 2;
+            // 
             // OrderManageFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 349);
+            this.Controls.Add(this.lblOrderId);
             this.Controls.Add(this.radgrpbxButtons);
             this.Controls.Add(this.radgrpbxOrders);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -136,6 +148,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Manage Orders";
             this.ThemeName = "Material";
+            this.Load += new System.EventHandler(this.OrderManageFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radgrpbxOrders)).EndInit();
             this.radgrpbxOrders.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radgvOrders.MasterTemplate)).EndInit();
@@ -147,6 +160,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radbtnNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -154,11 +168,12 @@
 
         private Telerik.WinControls.Themes.MaterialTheme materialTheme1;
         private Telerik.WinControls.UI.RadGroupBox radgrpbxOrders;
-        private Telerik.WinControls.UI.RadGridView radgvOrders;
         private Telerik.WinControls.UI.RadGroupBox radgrpbxButtons;
         private Telerik.WinControls.UI.RadButton radbtnRemove;
         private Telerik.WinControls.UI.RadButton radbtnEdit;
         private Telerik.WinControls.UI.RadButton radbtnNew;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
+        private System.Windows.Forms.Label lblOrderId;
+        public Telerik.WinControls.UI.RadGridView radgvOrders;
     }
 }

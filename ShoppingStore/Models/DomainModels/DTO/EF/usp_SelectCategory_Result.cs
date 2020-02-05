@@ -11,17 +11,10 @@ namespace ShoppingStore.Models.DomainModels.DTO.EF
 {
     using System;
     
-    public partial class usp_SelectPerson_Result
+    public partial class usp_SelectCategory_Result
     {
-        public int PersonId { get; set; }
-        public Nullable<int> PersonCode { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string PersonAddress { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
-        public string Company { get; set; }
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
+        public Nullable<int> NumberOfProducts { get; set; }
     }
 }
